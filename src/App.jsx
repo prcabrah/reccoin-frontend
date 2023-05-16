@@ -1,18 +1,39 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Home from './pages/Home'
+import Header from './components/navigation/header'
+import logo from './assets/logo.png'
 
 function App() {
 
   return (
 
-    <div class='max-w-[32rem] mt-2rem mx-auto'>
-      <p>This is the Home Page to the <span class="text-blue-800">ReCoin Project</span>. 
-        Please note that the site is currently undergoing development.
-        Thanks.
-      </p>
+    <div className="h-20 w-full shadow-gray-900 flex justify-between items-center border-solid border-4 border-blue-700">
+
+    <div className='w-20 h-20 '>
+       <img src={logo} alt="logo" className="w-20 h-20" />
     </div>
+    <div className='flex flex-row justify-between items-center'>
+        <li>
+            HOME
+        </li>
+        <li>
+            PRC
+        </li>
+        <li>
+            WHITE PAPER
+        </li>
+        <li>
+            CONTACT US
+        </li>
+    </div>
+
+    <div>
+        <p>CONNECT WALLET</p>
+    </div>
+  
+</div>
+
   )
 }
 
