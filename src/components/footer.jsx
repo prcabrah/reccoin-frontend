@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
   
   return (
-    <footer className="fixed bottom-0 w-full">
+    <footer className=" w-full">
 
       {/* main footer */}
       <div className='bg-primary40 text-white flex flex-row justify-around px-8 py-16'>
@@ -34,9 +34,9 @@ const Footer = () => {
         {/* contact us */}
         <div>
           <p className='font-2 font-openSans font-bold mb-4'>Contact Us</p>
-          <p className='font-2 font-openSans mb-4 font-extralight'>1881 SW 164th Avenue</p>
+          <p className='font-2 font-openSans mb-2 font-extralight'>1881 SW 164th Avenue</p>
           <p className='font-2 font-openSans mb-4 font-extralight'>Miramar, FL 33027, USA.</p>
-          <p className='font-2 font-openSans mb-4 font-extralight'>info@grandida.com</p>
+          <p className='font-2 font-openSans font-extralight'>info@grandida.com</p>
         </div>
 
         {/* subscribe */}
@@ -47,7 +47,7 @@ const Footer = () => {
       </div> {/* ends main footer */}
 
       {/* sub footer */}
-      <div className='flex flex-row p-4 w-full justify-center'>
+      <div className='flex flex-row p-4 w-full justify-center bg-white'>
         <p className="text-2 font-neutral font-extralight text-center">Copyright 2023 RECCOIN | All Rights Reserved</p>
         <p className="text-2 font-neutral font-extralight hover:underline cursor-pointer absolute right-8">Privacy Policy</p>
       </div>

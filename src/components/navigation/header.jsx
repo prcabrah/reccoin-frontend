@@ -5,7 +5,7 @@ import Logo from '../logo'
 
 const Header = () => {
   return (
-    <header className="fixed top-0 h-20 w-full font-roboto font-bold text-base text-primary40 flex justify-around items-center border-blue-700 border-2, shadow-light ">
+    <header className="fixed bg-white top-0 h-20 w-full font-roboto font-bold text-base text-primary40 flex justify-around items-center border-blue-700 border-2, shadow-light ">
         {/* logo */}
         <div className='w-16 h-16'>
             <Logo fill="#0D4D00" w="64" h="64" />

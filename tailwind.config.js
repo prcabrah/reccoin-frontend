@@ -26,7 +26,7 @@ export default {
         'primary40': "#006D44"
       },
       backgroundImage: {
-        'herobg': "url('/src/assets/hero-bg.png')"
+        'herobg': "url('/src/assets/hero-bg.svg')"
       },
       screens: {
         
