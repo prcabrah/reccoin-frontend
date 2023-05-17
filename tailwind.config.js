@@ -17,11 +17,13 @@ export default {
       'base': "1rem",
     },
     fontFamily: {
-      'roboto': ['Roboto']
+      'roboto': ['Roboto'],
+      'openSans': ['Open Sans']
     },
     extend: {
       colors: {
-       'primary40': "#006D44"
+        'neutral': "#5C5F5C",
+        'primary40': "#006D44"
       },
       backgroundImage: {
         'herobg': "url('/src/assets/hero-bg.png')"
