@@ -1,34 +1,31 @@
 import React from 'react'
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logo.svg'
 import { Link } from 'react-router-dom'
+import dropdown from '../../assets/dropdown.svg'
 
 const Header = () => {
   return (
-    <div className="h-24 w-full shadow-gray-900 flex justify-between items-center">
-
-        <div className='w-20 h-20'>
-           <img src={logo} alt="logo" className="w-20 h-20"/>
-        </div>
-        <div className='flex flex-row justify-between items-center'>
-            <li>
-                <Link to="">Home</Link>
-            </li>
-            <li>
-                <Link to="">PRC</Link>
-            </li>
-            <li>
-                <Link to="">WHITE PAPER</Link>
-            </li>
-            <li>
-                <Link to="">CONTACT US</Link>
-            </li>
+    <header className="h-20 w-full font-roboto font-bold text-base text-primary40 flex justify-around items-center border-blue-700 border-2, shadow-light ">
+        {/* logo */}
+        <div className='w-16 h-16'>
+            <img src={logo} alt="logo" className="w-16 h-16" />
         </div>
 
-        <div>
-            <p>CONNECT WALLET</p>
+        {/* header links and connect button */}
+        <div className='flex flex-row justify-between'>
+
+            {/* header links */}
+            <ul className='flex flex-row items-center'>
+                <li className=' mr-4 hover:underline flex flex-row'> <Link to="/">HOME</Link> <img src={dropdown} alt="dropdown icon" />  </li>
+                <li className='mr-4 hover:underline'><Link to>PRC</Link></li>
+                <li className='mr-4 hover:underline'><Link> WHITE PAPER</Link></li>
+                <li className='mr-4 hover:underline'><Link>CONTACT US</Link></li>
+            </ul>
+            {/* connect button */}
+            <button className='rounded text-white bg-primary40 p-2 ml-4'>CONNECT WALLET</button>
         </div>
-      
-    </div>
+  
+    </header>
   
     )
 }
