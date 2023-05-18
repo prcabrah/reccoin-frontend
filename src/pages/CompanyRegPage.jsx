@@ -11,13 +11,13 @@ const CompanyRegPage = () => {
           Company Registration Page
         </p>
         <div className='flex flex-row justify-center mt-6'>
-          <div className='w-[10rem] md:w-[22rem] lg:w-[33rem] min-h-[50rem] bg-blue-50 border border-primary40-700'>
-            <div className='flex flex-row'>
-              <div className='w-46 h-46 items-center'>
+          <div className='w-[10rem] md:w-[22rem] lg:w-[33rem] min-h-[50rem] bg-[#F8F9FB] border border-primary40-700'>
+            <div className='flex flex-row mt-10 ml-10'>
+              <div className='w-46 h-46 items-center '>
                 <Logo fill='#0D4D00' w='46' h='46' />
               </div>
-              <p className='text-[1rem] md:text-[1rem] lg:text-[1rem] mt-3 font-bold text-center'>
-                Recoin
+              <p className='text-[1rem] md:text-[1rem] lg:text-[1.2rem] mt-2 ml-3 text-[#0D4D00]  text-center'>
+                Reccoin
               </p>
             </div>
           </div>
