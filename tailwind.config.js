@@ -23,10 +23,11 @@ export default {
     extend: {
       colors: {
         'neutral': "#5C5F5C",
-        'primary40': "#006D44"
+        'primary40': "#006D44",
+        'primary60': "#0D4D00"
       },
       backgroundImage: {
-        'herobg': "url('/src/assets/hero-bg.svg')"
+        'herobg': "url('/src/assets/ellipse-bg.svg')"
       },
       screens: {
         

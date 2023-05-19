@@ -3,10 +3,13 @@ import Hero from '../components/homepage_components/hero'
 import LatestNews from "../components/homepage_components/LatestNews.jsx";
 
 const Home = () => {
-  return <>
-    <Hero />
-    <LatestNews />
-  </>
+  return (
+    <div className='max-w-[1028px] mx-auto'>
+      <Hero />
+      <LatestNews />
+    </div>
+  )
+  
 }
 
 export default Home
