@@ -20,7 +20,7 @@ function App() {
         <Route path="/white-paper" element={<WhitePaper />} />
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/dashboard" element={<Dashboard/>} />
-        <Route path="/aboutus" element={<AboutUs/>}/>
+        <Route path="/about-us" element={<AboutUs/>}/>
       </Routes>
       <Footer/>
     </>

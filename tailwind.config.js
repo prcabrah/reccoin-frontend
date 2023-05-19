@@ -28,7 +28,8 @@ export default {
         "primary60": "#0D4D00"
       },
       backgroundImage: {
-        'herobg': "url('/src/assets/ellipse-bg.svg')"
+        'herobg': "url('/src/assets/ellipse-bg.svg')",
+        'faqbg': "url('/src/assets/faq.svg')"
       },
       screens: {
         
