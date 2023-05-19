@@ -25,7 +25,7 @@ export default {
       colors: {
         'neutral': "#5C5F5C",
         'primary40': "#006D44",
-        "primary42": "#0D4D00"
+        "primary60": "#0D4D00"
       },
       backgroundImage: {
         'herobg': "url('/src/assets/ellipse-bg.svg')"
