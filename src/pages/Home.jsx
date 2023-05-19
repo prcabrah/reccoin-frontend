@@ -4,17 +4,16 @@ import Hero from '../components/homepage_components/hero'
 import {EarnReccoinReward} from '../components/homepage_components/earnReccoin'
 import LatestNews from "../components/homepage_components/LatestNews.jsx";
 import About from '../components/homepage_components/about';
-import CompanyRegPage from './CompanyRegPage';
+// import CompanyRegPage from './CompanyRegPage';
 
 
 const Home = () => {
   return <>
-    <Hero />
-    {/* <EarnReccoin /> */}
+    {/* <Hero /> */}
     <EarnReccoinReward />
     <About/>
     <LatestNews />
-    <CompanyRegPage />
+    
   </>
 }
 

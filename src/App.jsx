@@ -6,15 +6,16 @@ import Footer from './components/footer'
 import {WhitePaper} from "./pages/WhitePaper.jsx";
 import Contact from "./pages/Contact.jsx";
 import Dashboard from './pages/Dashboard'
+import CompanyRegPage from './pages/CompanyRegPage';
 
 function App() {
 
   return (
     <>
-      {/* <Header/> */}
+      <Header/>
       <Routes>
         <Route path="/" element={<Home/>} />
-        <Route path="/prc" element={''}/>
+        <Route path="/register" element={<CompanyRegPage />}/>
         <Route path="/white-paper" element={<WhitePaper />} />
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/dashboard" element={<Dashboard/>} />
