@@ -1,3 +1,4 @@
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -7,7 +8,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'herobg': "url('/src/assets/hero-bg.png')"
+        'herobg': "url('/src/assets/ellipse.png')"
       }
     },
   },

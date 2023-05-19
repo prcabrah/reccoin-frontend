@@ -5,9 +5,13 @@
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 body {
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
+  width: "100%";
+  margin:0;
+  padding:0
 }
 
