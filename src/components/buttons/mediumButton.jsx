@@ -1,8 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const MediumButton = ({text}) => {
+const MediumButton = ({text, linkto}) => {
   return (
-    <button className='bg-primary60'>{text}</button>
+    <Link to={`${linkto}`} className='bg-primary60 p-4 text-white  rounded-lg'>{text}</Link>
   )
 }
 

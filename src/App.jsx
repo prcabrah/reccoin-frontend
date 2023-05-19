@@ -7,6 +7,7 @@ import {WhitePaper} from "./pages/WhitePaper.jsx";
 import Contact from "./pages/Contact.jsx";
 import Dashboard from './pages/Dashboard'
 import CompanyRegPage from './pages/CompanyRegPage';
+import AboutUs from './pages/AboutUs';
 
 function App() {
 
@@ -19,7 +20,7 @@ function App() {
         <Route path="/white-paper" element={<WhitePaper />} />
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/dashboard" element={<Dashboard/>} />
-        <Route path="" />
+        <Route path="/aboutus" element={<AboutUs/>}/>
       </Routes>
       <Footer/>
     </>
