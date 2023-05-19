@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router-dom'
 import Footer from './components/footer'
 import {WhitePaper} from "./pages/WhitePaper.jsx";
 import Contact from "./pages/Contact.jsx";
+import Dashboard from './pages/Dashboard'
 
 function App() {
 
@@ -16,7 +17,7 @@ function App() {
         <Route path="/prc" element={''}/>
         <Route path="/white-paper" element={<WhitePaper />} />
         <Route path="/contact-us" element={<Contact />} />
-        <Route path="" />
+        <Route path="/dashboard" element={<Dashboard/>} />
         <Route path="" />
       </Routes>
       <Footer/>

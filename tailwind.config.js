@@ -18,7 +18,8 @@ export default {
     },
     fontFamily: {
       'roboto': ['Roboto'],
-      'openSans': ['Open Sans']
+      'openSans': ['Open Sans'],
+      'montserrat': ['Montserrat']
     },
     extend: {
       colors: {
