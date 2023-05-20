@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Hero = () => {
   return (
@@ -18,6 +19,20 @@ const Hero = () => {
           operational speed and cost savings.
         </p>
       </div>
+      <div className='bg-green-50'>
+        <div className='h-10'>
+        <h1 className='text-64 text-center font-openSans font-extrabold text-64 text-green-900'>HOW IT WORKS</h1>
+        </div>
+        <div className='max-h-96 mt-10 ml-16 w-6/12'>
+        <p className='font-openSans font-semibold text-center'>Customers and investors want instant access to funds. Fireblocks' MPC-CMP algorithm helps you meet client SLAs regardless of your wallet configuration. MPC-CMP gives you 8x faster transaction signing speed and enables you to customize your wallet temperature – choose between hot, cold, or warm wallets.
+        Customers and investors want instant access to funds. Fireblocks' MPC-CMP algorithm helps you meet client SLAs regardless of your wallet configuration. MPC-CMP gives you </p>
+        </div>
+        <div className='mt-20 mb-20 ml-16'>
+        <a className='bg-green-700 text-white p-6 rounded' href="">Learn More</a>
+        </div>
+
+      </div>
+
 
     </>
   )
