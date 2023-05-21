@@ -4,7 +4,7 @@ import Logo from './logo';
 
 const Layout = () => {
   return (
-    <div className='relative'>
+    <div className='relative h-screen'>
       <button
         data-drawer-target='default-sidebar'
         data-drawer-toggle='default-sidebar'
@@ -255,7 +255,7 @@ const Layout = () => {
           </ul>
         </div>
       </aside>
-      <main className='absolute right-0 z-100 '>
+      <main className='absolute right-0'>
         <header className='p-4 bg-gray-200 w-[16rem] md:w-[22rem] lg:w-[70rem] border-black-700 flex flex-row justify-around items-center'>
           <div className='w-46 h-46 items-center '>
             <Logo fill='#0D4D00' w='56' h='56' />
@@ -275,8 +275,18 @@ const Layout = () => {
         </header>
         <div className='p-4'>{/* Content of the main section */}</div>
       </main>
-      <footer className='w-full p-4 absolute bottom-0 bg-[#0D4D00] text-white text-center'>
-        {/* Footer content */}
+      <footer className='absolute right-0 bottom-0 w-[16rem] md:w-[22rem] lg:w-[70rem] h-[8rem] flex flex-col bg-gray-200 text-black '>
+        <div className='mr-4'>
+          <p className='text-[1rem] md:text-[1.2rem] lg:text-[1.7rem] mt-1 w-[24rem]   text-[#000000]'>
+            Enter to Earn a Reccoin
+          </p>
+        </div>
+        <div className='mr-4'>
+          <button className='rounded-full rounded-[6px] mr-4  py-1 px-6 text-[0.6rem] md:text-[0.8rem] lg:text-[1rem] font-medium text-[#fff] bg-[#0D4D00]'>
+            LEARN MORE
+          </button>
+        </div>
+        <div className='w-[16rem] md:w-[22rem] lg:w-[70rem] h-[4rem] bg-[#0D4D00]'></div>
       </footer>
     </div>
   );
