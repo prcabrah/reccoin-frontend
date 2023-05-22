@@ -35,7 +35,22 @@ jobs:
         if: success() || failure() # Run even if tests fail
         run: yarn run build
         continue-on-error: false
-
+        
+      # Merge to dev branch
+      - name: Merge to dev
+        if: success() && github.event_name == 'push' && github.ref == 'refs/heads/dev' # Only merge on successful push to main branch
+        uses: 'stefanzweifel/git-auto-commit-action@v4'
+        with:
+          commit_message: "Merge to main branch"
+          commit_options: '--no-verify --signoff'
+          branch: 'main'
+          commit_user_name: ${{ github.name }}
+          commit_user_email: ${{ github.email }}@users.noreply.github.com
+        env:
+          GITHUB_TOKEN: ${{secrets.TOKEN_GIT}}
+        continue-on-error: false
+        
+        
 #       # Deploy to Vercel
 #       - name: Deploy to Vercel
 #         if: success() && github.ref == 'refs/heads/dev' # Only deploy on successful push to main branch
@@ -61,27 +76,15 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         timeout-minutes: 1
 
-      # Merge to main branch
-      - name: Merge to dev
-        if: success() && github.event_name == 'push' && github.ref == 'refs/heads/dev' # Only merge on successful push to main branch
-        uses: 'stefanzweifel/git-auto-commit-action@v4'
-        with:
-          commit_message: "Merge to main branch"
-          commit_options: '--no-verify --signoff'
-          branch: 'main'
-          commit_user_name: ${{ github.name }}
-          commit_user_email: ${{ github.email }}@users.noreply.github.com
-        env:
-          GITHUB_TOKEN: ${{secrets.TOKEN_GIT}}
-        continue-on-error: false
 
-      # Merge to main branch
-      - name: Merge to dev
-        if: success() && github.event_name == 'push' && github.ref == 'refs/heads/dev' # Only merge on successful push to main branch
-        run: git merge origin/dev --no-edit
-        env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN_GIT }}
-        continue-on-error: false
+
+#       # Merge to main branch
+#       - name: Merge to dev
+#         if: success() && github.event_name == 'push' && github.ref == 'refs/heads/dev' # Only merge on successful push to main branch
+#         run: git merge origin/dev --no-edit
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.TOKEN_GIT }}
+#         continue-on-error: false
         
         
  
