@@ -1,17 +1,32 @@
-# recCoin-frontend
-Frontend Folder for the reccoin platform
+## Recoin
+Website: http://url.netlify.com
+<br />
+Smart Contract: https://github.com/
 
-# Link to recCoin frontend sitemap
-[https://octopus.do/o8eges8bxgc](https://octopus.do/o8eges8bxgc)
+## Stacks:
+Solidity, React, bootstrap & Third-web
 
-# Link to recCoin Whitepaper
-[https://local-tellurium-76a.notion.site/THE-RECCOIN-WHITEPAPER-70d3ed1358c1466b82666ca07f1976a1](https://local-tellurium-76a.notion.site/THE-RECCOIN-WHITEPAPER-70d3ed1358c1466b82666ca07f1976a1)
+## NOTE: Use Goerli Network to test & Pinata for image url
 
-# Link to Product Requirements Document
-[https://local-tellurium-76a.notion.site/Product-Requirements-Document-PRD-for-the-RecCoin-Platform-efbd17cefb294761b676f977bdeb2b05](https://local-tellurium-76a.notion.site/Product-Requirements-Document-PRD-for-the-RecCoin-Platform-efbd17cefb294761b676f977bdeb2b05)
+## Building the project
 
-# Link to description of available positions
-[https://local-tellurium-76a.notion.site/Job-Descriptions-for-the-RecCoin-Platform-Project-684b47082d84450489363722984b1463](https://local-tellurium-76a.notion.site/Job-Descriptions-for-the-RecCoin-Platform-Project-684b47082d84450489363722984b1463)
+After any changes to the contract, run:
+
+```bash
+#For testing
+yarn run dev
+
+# production
+yarn run build
+# or
+yarn build
+```
+
+to compile your contracts. This will also detect the [Contracts Extensions Docs](https://portal.thirdweb.com/contractkit) detected on your contract.
+
+## Deploying Contracts
+
+When you're ready to deploy your contracts, just run one of the following command to deploy you're contracts:
 
 
 ### Ether.js Documentation
@@ -116,3 +131,9 @@ Here are some additional resources that you may find helpful for working with Et
 [Ethereum Official Website](https://ethereum.org/)
 
 These resources provide further information, examples, and references to help you explore and utilize Ether.js effectively.
+
+```bash
+npm run deploy
+# or
+yarn deploy
+```
