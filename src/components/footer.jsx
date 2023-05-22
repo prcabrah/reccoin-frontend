@@ -1,5 +1,5 @@
-import Logo from './logo';
-import { Link } from 'react-router-dom';
+import Logo from "./logo";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -35,7 +35,7 @@ const Footer = () => {
             White Paper
           </Link>
           <Link
-            to={'/privacy-policy'}
+            to={"/privacy-policy"}
             className="font-2 font-openSans mb-4 font-extralight"
           >
             Privacy Policy
@@ -63,7 +63,7 @@ const Footer = () => {
             Subcribe to our mailing list
           </p>
         </div>
-      </div>{' '}
+      </div>{" "}
       {/* ends main footer */}
       {/* sub footer */}
       <div className="flex flex-row p-4 w-full justify-center bg-white">
