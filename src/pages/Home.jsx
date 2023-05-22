@@ -1,4 +1,5 @@
 
+
 import Hero from '../components/homepage_components/HeroSection'
 import { EarnReccoinReward } from '../components/homepage_components/earnReccoin';
 import LatestNews from '../components/homepage_components/LatestNews.jsx';
