@@ -1,5 +1,6 @@
 import Logo from "../logo";
 import { Link } from "react-router-dom";
+import emailIcon from '../../assets/email.svg'
 
 const HomeFooter = () => {
   return   <div className=" w-full bg-primary40 text-white flex flex-row justify-around px-8 py-16">
@@ -59,6 +60,14 @@ const HomeFooter = () => {
         <p className="font-2 font-openSans mb-4 font-extralight">
         Subcribe to our mailing list
         </p>
+        {/* subscribe input box */}
+        <div className="flex flex-row">
+            <div className="flex flex-row border-b border-white">
+                <img src={emailIcon} alt="email-icon" className="mr-2" />
+                <input type="text" placeholder="Enter your email" className="outline-none bg-primary40"/>
+            </div>
+            <button className="bg-white p-2 text-red-500">SUBMIT</button>
+        </div>
     </div>
     </div>
   

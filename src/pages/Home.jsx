@@ -18,7 +18,7 @@ const Home = () => {
       <EarnReccoinReward />
       <About />
       <Recycling/>
-      <HowItWorks />
+      {/* <HowItWorks /> */}
       <LatestNews />
       <Faq />
       <HomeFooter/>

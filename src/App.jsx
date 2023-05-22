@@ -10,6 +10,7 @@ import AboutUs from './pages/AboutUs';
 import Privacy from './components/homepage_components/Privacy';
 import Partners from "./pages/Partners";
 import Header from './components/navigation/header';
+import RecyclingCompanies from './pages/RecyclingCompanies';
 
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/privacy-policy" element={<Privacy />} />
         <Route path="/partners" element={<Partners />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/prc" element={<RecyclingCompanies />} />
       </Routes>
       <Footer />
     </>

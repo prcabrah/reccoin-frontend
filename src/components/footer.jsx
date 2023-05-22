@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
       <footer className=" w-full">
@@ -7,9 +9,9 @@ const Footer = () => {
         <p className="text-2 font-neutral font-extralight text-center">
           Copyright 2023 RECCOIN | All Rights Reserved
         </p>
-        <p className="text-2 font-neutral font-extralight hover:underline cursor-pointer absolute right-8">
+        <Link to="/privacy-policy" className="text-2 font-neutral font-extralight hover:underline cursor-pointer absolute right-8">
           Privacy Policy
-        </p>
+        </Link>
       </div>
     </footer>
   );
