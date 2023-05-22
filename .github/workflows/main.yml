@@ -41,9 +41,9 @@ jobs:
         if: success() && github.event_name == 'push' && github.ref == 'refs/heads/dev' # Only merge on successful push to main branch
         uses: 'stefanzweifel/git-auto-commit-action@v4'
         with:
-          commit_message: "Merge to main branch"
+          commit_message: "Merge to dev branch"
           commit_options: '--no-verify --signoff'
-          branch: 'main'
+          branch: 'dev'
           commit_user_name: ${{ github.name }}
           commit_user_email: ${{ github.email }}@users.noreply.github.com
         env:
