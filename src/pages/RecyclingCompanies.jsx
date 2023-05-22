@@ -2,8 +2,6 @@ import React from 'react'
 import { PRCData } from '../data/PRCdata'
 import { Link } from 'react-router-dom'
 
-
-
 const RecyclingCompanies = () => {
 
   return <>
@@ -35,25 +33,6 @@ const RecyclingCompanies = () => {
             </div>
            )
         }
-    </div>
-
-    {/* advertise */}
-    <div className='w-[80%] mx-auto mt-12 border border-primary40 p-4 rounded-[20px]'>
-        <h2 className='font-bold mb-4 '>Advertise your Plastic Recycling Company with us!</h2>
-        <p className='text-[0.8rem]'>Are you a plastic recycling company dedicated to making a positive impact on our environment? 
-            We invite you to join our mission by advertising your organization on our platform, 
-            a leading plastic collection website. By partnering with us, you can reach a wide audience 
-            of environmentally conscious individuals eager to contribute to the cause
-              Our platform does not only have an extensive outreach, but also allows you to target 
-            your advertisement to specific regions and demographics. We will help you stand out from 
-            the competition and improve your brand visibility. By aligning your brand with our reputable 
-            plastic collection website, you'll benefit from the trust and credibility we have built within 
-            the recycling community.
-
-            We also fosters collaboration among recycling organizations, and help you'll actively contribute 
-            to the global mission of reducing plastic waste and protecting our environment. So, what are you 
-            waiting for...
-        </p>
     </div>
   </>
   
