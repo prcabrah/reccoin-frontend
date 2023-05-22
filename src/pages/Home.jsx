@@ -1,16 +1,25 @@
-// import React from 'react'
-import Hero from '../components/homepage_components/hero'
-import LatestNews from "../components/homepage_components/LatestNews.jsx";
-import CompanyRegPage from './CompanyRegPage';
-// import Layout from './../components/Layout';
 
+
+import Hero from '../components/homepage_components/HeroSection'
+import { EarnReccoinReward } from '../components/homepage_components/earnReccoin';
+import LatestNews from '../components/homepage_components/LatestNews.jsx';
+import About from '../components/homepage_components/about';
+import Faq from '../components/homepage_components/faq';
+import howItWorks from '../components/homepage_components/howItWorks'
+import Recycling from '../components/homepage_components/Recycling';
+// import CompanyRegPage from './CompanyRegPage';
 
 const Home = () => {
-  return <>
-    <Hero />
-    <LatestNews />
-    <CompanyRegPage />
-  </>
-}
-
-export default Home
+  return (
+    <>
+      <Hero /> 
+      <EarnReccoinReward />
+      <About />
+      <Recycling/>
+      <howItWorks />
+      <LatestNews />
+      <Faq />
+    </>
+  );
+};
+export default Home;
