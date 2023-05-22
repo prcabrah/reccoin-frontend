@@ -6,6 +6,8 @@ import About from '../components/homepage_components/about';
 import Faq from '../components/homepage_components/faq';
 import howItWorks from '../components/homepage_components/howItWorks'
 import Recycling from '../components/homepage_components/Recycling';
+import HomeFooter from '../components/homepage_components/HomeFooter';
+import HowItWorks from '../components/homepage_components/howItWorks';
 // import CompanyRegPage from './CompanyRegPage';
 
 const Home = () => {
@@ -15,9 +17,10 @@ const Home = () => {
       <EarnReccoinReward />
       <About />
       <Recycling/>
-      <howItWorks />
+      <HowItWorks />
       <LatestNews />
       <Faq />
+      <HomeFooter/>
     </>
   );
 };

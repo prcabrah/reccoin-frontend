@@ -28,6 +28,9 @@ const Header = () => {
                 <li className='mr-4 hover:underline'>
                     <Link to="/contact-us">CONTACT US</Link>
                 </li>
+                <li className='mr-4 hover:underline'>
+                    <Link to="/dashboard">DASHBOARD</Link>
+                </li>
             </ul>
             {/* connect button */}
             <button className='rounded text-white bg-primary40 p-2 ml-4'>CONNECT WALLET</button>

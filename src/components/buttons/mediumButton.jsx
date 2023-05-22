@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const MediumButton = ({text, linkto}) => {
   return (
-    <Link to={`${linkto}`} className='bg-primary40 p-4 text-white  rounded-lg'>{text}</Link>
+    <Link to={`${linkto}`} className='w-32 bg-primary40 p-4 text-white rounded-[8px] hover:tracking-wide'>{text}</Link>
   )
 }
 
