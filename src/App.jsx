@@ -10,6 +10,8 @@ import Dashboard from './pages/Dashboard';
 import CompanyRegPage from './pages/CompanyRegPage';
 import AboutUs from './pages/AboutUs';
 import Privacy from './components/homepage_components/Privacy';
+import Partners from "./pages/Partners";
+
 
 function App() {
   return (
@@ -23,6 +25,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/privacy-policy" element={<Privacy />} />
+        <Route path="/partners" element={<Partners />} />
       </Routes>
       <Footer />
     </>
