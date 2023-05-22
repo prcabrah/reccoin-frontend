@@ -5,6 +5,7 @@ import LatestNews from '../components/homepage_components/LatestNews.jsx';
 import About from '../components/homepage_components/about';
 import Faq from '../components/homepage_components/faq';
 import howItWorks from '../components/homepage_components/howItWorks'
+import Recycling from '../components/homepage_components/Recycling';
 // import CompanyRegPage from './CompanyRegPage';
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
       <Hero /> 
       <EarnReccoinReward />
       <About />
+      <Recycling/>
       <howItWorks />
       <LatestNews />
       <Faq />
