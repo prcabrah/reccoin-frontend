@@ -32,7 +32,6 @@ export default {
         'faqbg': "url('/src/assets/faq.svg')"
       },
       screens: {
-        
       }
     },
   },
