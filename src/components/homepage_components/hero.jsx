@@ -1,3 +1,4 @@
+
 import MediumButton from '../buttons/mediumButton';
 import heroImage from '../../assets/hero-bg.svg';
 
@@ -33,6 +34,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
     </>
   );
 };
