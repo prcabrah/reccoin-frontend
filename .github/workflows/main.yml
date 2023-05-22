@@ -35,20 +35,6 @@ jobs:
         if: success() || failure() # Run even if tests fail
         run: yarn run build
         continue-on-error: false
-        
-      # Merge to dev branch
-      - name: Merge to dev
-        if: success() && github.event_name == 'push' && github.ref == 'refs/heads/dev' # Only merge on successful push to main branch
-        uses: 'stefanzweifel/git-auto-commit-action@v4'
-        with:
-          commit_message: "Merge to dev branch"
-          commit_options: '--no-verify --signoff'
-          branch: 'dev'
-          commit_user_name: ${{ github.actor }}
-          commit_user_email: ${{ github.email }}@users.noreply.github.com
-        env:
-          GITHUB_TOKEN: ${{secrets.TOKEN_GIT}}
-        continue-on-error: false
 
       # Merge to main branch
       - name: Merge to dev
