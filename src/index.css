@@ -11,6 +11,10 @@ body {
   box-sizing: border-box;
   width: "100%";
   margin:0;
-  padding:0
+  padding:0;
 }
 
+.bottom-border {
+    border-width: 0 0 2px 0;
+    border-color: gray;
+  }
