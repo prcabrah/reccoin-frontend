@@ -1,5 +1,4 @@
 // import React from 'react'
-// import { customIcons } from 'tailwind.config';
 import Logo from './logo';
 
 const Layout = () => {
@@ -51,7 +50,7 @@ const Layout = () => {
 
           <figcaption className='mt-1 text-white'>Welcome User</figcaption>
         </div>
-        <div className='h-full px-3 bg-[inherit] absolute top-40 left-8  py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800'>
+        <div className='h-full px-3  absolute top-40 left-8  py-4 overflow-y-auto  dark:bg-gray-800'>
           <ul className='space-y-2 font-medium'>
             <li>
               <a
@@ -256,7 +255,7 @@ const Layout = () => {
         </div>
       </aside>
       <main className='absolute right-0'>
-        <header className='p-4 bg-gray-200 w-[16rem] md:w-[22rem] lg:w-[70rem] border-black-700 flex flex-row justify-around items-center'>
+        <header className='p-4 w-[16rem] md:w-[22rem] lg:w-[70rem] border-black-700 flex flex-row justify-around items-center'>
           <div className='w-46 h-46 items-center '>
             <Logo fill='#0D4D00' w='56' h='56' />
           </div>
@@ -275,18 +274,20 @@ const Layout = () => {
         </header>
         <div className='p-4'>{/* Content of the main section */}</div>
       </main>
-      <footer className='absolute right-0 bottom-0 w-[16rem] md:w-[22rem] lg:w-[70rem] h-[8rem] flex flex-col bg-gray-200 text-black '>
-        <div className='mr-4'>
-          <p className='text-[1rem] md:text-[1.2rem] lg:text-[1.7rem] mt-1 w-[24rem]   text-[#000000]'>
-            Enter to Earn a Reccoin
-          </p>
+      <footer className='absolute right-0 bottom-0 w-[16rem] md:w-[22rem] lg:w-[70rem] h-[8rem]  bg-gray-200 text-black '>
+        <div className=' flex flex-col justify-between item-center '>
+          <div className='mr-4'>
+            <p className='text-[1rem] md:text-[1.2rem] lg:text-[1.7rem] mt-1 w-[24rem]   text-[#000000]'>
+              Enter to Earn a Reccoin
+            </p>
+          </div>
+          <div className='mr-4'>
+            <button className='rounded-full rounded-[6px] mr-4 py-2 px-6 text-[0.6rem] md:text-[0.8rem] lg:text-[1rem] font-medium text-[#fff] bg-[#0D4D00]'>
+              LEARN MORE
+            </button>
+          </div>
+          <div className='w-[16rem] md:w-[22rem] lg:w-[70rem] h-[4rem] border-black-400 bg-[#0D4D00]'></div>
         </div>
-        <div className='mr-4'>
-          <button className='rounded-full rounded-[6px] mr-4  py-1 px-6 text-[0.6rem] md:text-[0.8rem] lg:text-[1rem] font-medium text-[#fff] bg-[#0D4D00]'>
-            LEARN MORE
-          </button>
-        </div>
-        <div className='w-[16rem] md:w-[22rem] lg:w-[70rem] h-[4rem] bg-[#0D4D00]'></div>
       </footer>
     </div>
   );
