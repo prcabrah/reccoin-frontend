@@ -1,4 +1,5 @@
 import React from "react";
+import heroImage from "../../assets/home-bgg.png"
 
 const Hero = () => {
   return (
@@ -20,7 +21,7 @@ const Hero = () => {
 
             <div>
               <img
-                src="/src/assets/home-bgg.png"
+                src={heroImage}
                 alt="home-img"
                 className="-mt-28"
               />
