@@ -20,13 +20,16 @@ const Header = () => {
                     <Link to="/">HOME</Link> <img src={dropdown} alt="dropdown icon" />
                 </li>
                 <li className='mr-4 hover:underline'>
-                    <Link to="/">PRC</Link>
+                    <Link to="/prc">PRC</Link>
                 </li>
                 <li className='mr-4 hover:underline'>
                     <Link to="/white-paper"> WHITE PAPER</Link>
                 </li>
                 <li className='mr-4 hover:underline'>
                     <Link to="/contact-us">CONTACT US</Link>
+                </li>
+                <li className='mr-4 hover:underline'>
+                    <Link to="/dashboard">DASHBOARD</Link>
                 </li>
             </ul>
             {/* connect button */}

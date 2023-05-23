@@ -1,7 +1,5 @@
 
-// import { useState } from 'react'
 import Home from './pages/Home';
-import Header from './components/navigation/Header.jsx';
 import { Route, Routes } from 'react-router-dom';
 import Footer from './components/footer';
 import { WhitePaper } from './pages/WhitePaper.jsx';
@@ -11,6 +9,8 @@ import CompanyRegPage from './pages/CompanyRegPage';
 import AboutUs from './pages/AboutUs';
 import Privacy from './components/homepage_components/Privacy';
 import Partners from "./pages/Partners";
+import Header from './components/navigation/header';
+import RecyclingCompanies from './pages/RecyclingCompanies';
 
 
 
@@ -27,6 +27,7 @@ function App() {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/privacy-policy" element={<Privacy />} />
         <Route path="/partners" element={<Partners />} />
+        <Route path="/prc" element={<RecyclingCompanies />} />
       </Routes>
       <Footer />
     </>
