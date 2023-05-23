@@ -1,11 +1,10 @@
-import React from 'react'
-
 const howItWorks = () => {
-  return (
-    <div>
-      <h1 className='w-487 h-88.4 top-4967.49'>HOW IT WORKS</h1>
-    </div>
-  )
+    return ( 
+        <div className="">
+            <h1>How it works</h1>
+            <h2>it woks</h2>
+        </div>
+     );
 }
-
-export default howItWorks
+ 
+export default howItWorks;

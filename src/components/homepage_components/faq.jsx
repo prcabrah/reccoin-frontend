@@ -23,7 +23,7 @@ const Faq = () => {
     <h3 className='text-center pt-2 pb-4 font-bold'>We’ve Got Answers</h3>
 
     {/* buttons and image */}
-    <div className='flex flex-row justify-center mb-0'>
+    <div className='flex flex-row justify-around mb-0'>
         <div>
             {
                 faqData.map((item, index) => 
