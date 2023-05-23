@@ -23,6 +23,7 @@ export default {
         'primary40': "#006D44",
         "primary60": "#0D4D00",
         customBrown: "#6E5E00",
+        'bg-color': "#F2FAF7"
       },
       backgroundImage: {
         'herobg': "url('/src/assets/ellipse-bg.svg')",

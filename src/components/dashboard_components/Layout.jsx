@@ -1,9 +1,18 @@
-// import React from 'react'
-import Logo from './logo';
+import Logo from '../logo';
+import menuIcon from '../../assets/menu-ic.svg'
+import { Link } from 'react-router-dom';
+import { DashboardLeftNavData } from '../../data/DashboardLeftNavData';
+import { DashboardFooterData } from '../../data/DashboardFooterData';
+import searchIcon from '../../assets/search.svg'
+
 
 const Layout = () => {
+
+ 
   return (
     <div className='relative h-screen'>
+
+      {/* toggle menu button */}
       <button
         data-drawer-target='default-sidebar'
         data-drawer-toggle='default-sidebar'
@@ -12,24 +21,13 @@ const Layout = () => {
         className='inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600'
       >
         <span className='sr-only'>Open sidebar</span>
-        <svg
-          className='w-6 h-6'
-          aria-hidden='true'
-          fill='currentColor'
-          viewBox='0 0 20 20'
-          xmlns='http://www.w3.org/2000/svg'
-        >
-          <path
-            clipRule='evenodd'
-            fillRule='evenodd'
-            d='M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z'
-          ></path>
-        </svg>
+        <img src={menuIcon} alt="" />
       </button>
 
+      {/* left side bar */}
       <aside
         id='default-sidebar'
-        className='fixed top-0 left-0 z-40 bg-[#0D4D00] w-64 items-center border-2 border-[#0D4D00] h-screen transition-transform -translate-x-full sm:translate-x-0'
+        className='fixed top-0 left-0 top-20 z-40 bg-[#0D4D00] items-center border-2 border-[#0D4D00] w-[20%] h-screen overflow-y-scroll transition-transform -translate-x-full sm:translate-x-0 mb-20'
         aria-label='Sidebar'
       >
         <div className='p-4 absolute left-12'>
@@ -50,8 +48,20 @@ const Layout = () => {
 
           <figcaption className='mt-1 text-white'>Welcome User</figcaption>
         </div>
+
+        {/*  menu items*/}
         <div className='h-full px-3  absolute top-40 left-8  py-4 overflow-y-auto  dark:bg-gray-800'>
-          <ul className='space-y-2 font-medium'>
+         <ul className='space-y-2 text-white font-medium'>
+         {
+            DashboardLeftNavData.map((item, index) =>
+            <Link key={index} className='flex flex-row my-4 py-4 border-b justify-left items-center border-[#71b453] hover: border-white '>
+                <img src={item.icon} alt="link logo" className='mr-4' />
+                <h4 className='text-2 font-montserrat'>{item.title}</h4>
+            </Link>
+            )
+        }
+         </ul>
+          {/* <ul className='space-y-2 font-medium'>
             <li>
               <a
                 href='#'
@@ -251,11 +261,17 @@ const Layout = () => {
                 </span>
               </a>
             </li>
-          </ul>
+          </ul> */}
         </div>
+
       </aside>
-      <main className='absolute right-0'>
-        <header className='p-4 w-[16rem] md:w-[22rem] lg:w-[70rem] border-black-700 flex flex-row justify-around items-center'>
+
+
+      {/* card component: header and content of dashboard */}
+      <main className='absolute right-0 top-20 w-[80%] overflow-hidden bg-[#F8F9FB]'>
+        {/* dash board header */}
+        {/* w-[16rem] md:w-[22rem] lg:w-[70rem] */}
+        <header className='p-4 border-black-700 flex flex-row justify-around items-center'>
           <div className='w-46 h-46 items-center '>
             <Logo fill='#0D4D00' w='56' h='56' />
           </div>
@@ -264,29 +280,52 @@ const Layout = () => {
               USER DASHBOARD
             </h1>
           </div>
-          <div className='mt-4'>
+          {/* search box */}
+          <div className='mt-4 flex flex-row border border-primary60 rounded-r-[20px] bg-white overflow-hidden '>
+            <img src={searchIcon} alt="search-icon" className='border-r border-primary60 p-2'/>
             <input
               type='text'
-              placeholder='Search'
-              className='border border-blue-400 p-2 w-100'
+              placeholder='Companies, Offers & Contest'
+              className='p-2 w-100 italic text-primary60 focus:outline-none'
             />
           </div>
         </header>
-        <div className='p-4'>{/* Content of the main section */}</div>
+          {/* dashboard content */}
+        <div className='p-4 h-[400px]'>
+
+        </div>
       </main>
-      <footer className='absolute right-0 bottom-0 w-[16rem] md:w-[22rem] lg:w-[70rem] h-[8rem]  bg-gray-200 text-black '>
-        <div className=' flex flex-col justify-between item-center '>
-          <div className='mr-4'>
-            <p className='text-[1rem] md:text-[1.2rem] lg:text-[1.7rem] mt-1 w-[24rem]   text-[#000000]'>
+
+          {/* dashboard footer */}
+      <footer className='absolute right-0 bottom-0 w-[80%] p-4  h-[8rem]  bg-gray-200 text-black '>
+        {/* md:w-[22rem] lg:w-[70rem] */}
+        <div className=' flex flex-row item-center italic '>
+
+          <div className='flex flex-col'>
+            {/* enter to earn a reccoin */}
+            <p className='text-[1rem] md:text-[1.2rem] lg:text-[1.5rem] mt-1 w-[24rem] text-[#000000]'>
               Enter to Earn a Reccoin
             </p>
-          </div>
-          <div className='mr-4'>
-            <button className='rounded-full rounded-[6px] mr-4 py-2 px-6 text-[0.6rem] md:text-[0.8rem] lg:text-[1rem] font-medium text-[#fff] bg-[#0D4D00]'>
+          {/* learn more button*/}
+            <Link className='rounded-[26px] w-40 py-4 px-6 text-[0.6rem] md:text-[0.8rem] lg:text-[1rem] font-medium text-[#fff] bg-[#71B453]'>
               LEARN MORE
-            </button>
+            </Link>
+
           </div>
-          <div className='w-[16rem] md:w-[22rem] lg:w-[70rem] h-[4rem] border-black-400 bg-[#0D4D00]'></div>
+
+          {/* other links */}
+          <div className='flex flex-row justify-between items-center p-2'>
+            {
+              DashboardFooterData.map((item, index) => 
+              <Link className='flex flex-col p-4 mr-4 justify-center items-center'>
+                <img src={item.icon} alt={`${item.title} icon`} className='h-8 w-8' />
+                <h4 className='font-bold text-primary60'>{item.title}</h4>
+              </Link>
+              )
+            }
+           
+          </div>
+          {/* <div className='w-[16rem] md:w-[22rem] lg:w-[70rem] h-[4rem] border-black-400 bg-[#0D4D00]'></div> */}
         </div>
       </footer>
     </div>
