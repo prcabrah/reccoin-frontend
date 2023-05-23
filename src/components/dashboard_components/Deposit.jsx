@@ -1,6 +1,6 @@
 // import React from 'react'
-import deposit from '../../src/assets/deposit.png';
-import Vector from '../../src/assets/Vector.png';
+import deposit from '../../assets/deposit.png';
+import Vector from '../../assets/Vector.png';
 
 const Deposit = () => {
   return (

@@ -1,16 +1,19 @@
+import { useRef, useState } from 'react';
 import Logo from '../logo';
 import menuIcon from '../../assets/menu-ic.svg'
 import { Link } from 'react-router-dom';
 import { DashboardLeftNavData } from '../../data/DashboardLeftNavData';
 import { DashboardFooterData } from '../../data/DashboardFooterData';
 import searchIcon from '../../assets/search.svg'
-
+import Deposit from './Deposit';
 
 const Layout = () => {
 
+  // set company to display based on index
+  const [componentToDisplay, setComponentToDisplay] = useState('')
  
   return (
-    <div className='relative h-screen'>
+    <div>
 
       {/* toggle menu button */}
       <button
@@ -54,7 +57,7 @@ const Layout = () => {
          <ul className='space-y-2 text-white font-medium'>
          {
             DashboardLeftNavData.map((item, index) =>
-            <Link key={index} className='flex flex-row my-4 py-4 border-b justify-left items-center border-[#71b453] hover: border-white '>
+            <Link key={index} onClick={() => setComponentToDisplay(index)} className='flex flex-row my-4 py-4 border-b justify-left items-center border-[#71b453] hover: border-white '>
                 <img src={item.icon} alt="link logo" className='mr-4' />
                 <h4 className='text-2 font-montserrat'>{item.title}</h4>
             </Link>
@@ -268,7 +271,7 @@ const Layout = () => {
 
 
       {/* card component: header and content of dashboard */}
-      <main className='absolute right-0 top-20 w-[80%] overflow-hidden bg-[#F8F9FB]'>
+      <main className='absolute right-0 top-20 mb-20 w-[80%] overflow-hidden bg-[#F8F9FB]'>
         {/* dash board header */}
         {/* w-[16rem] md:w-[22rem] lg:w-[70rem] */}
         <header className='p-4 border-black-700 flex flex-row justify-around items-center'>
@@ -291,14 +294,17 @@ const Layout = () => {
           </div>
         </header>
           {/* dashboard content */}
-        <div className='p-4 h-[400px]'>
-
+        <div className=''>
+            {
+              componentToDisplay == 0 ? <Deposit/> : componentToDisplay == 1 ? "" : ""
+            }
+            
         </div>
-      </main>
+    
 
           {/* dashboard footer */}
-      <footer className='absolute right-0 bottom-0 w-[80%] p-4  h-[8rem]  bg-gray-200 text-black '>
-        {/* md:w-[22rem] lg:w-[70rem] */}
+      <footer className='w-[100%] p-4 h-30 bg-gray-200 text-black '>
+        
         <div className=' flex flex-row item-center italic '>
 
           <div className='flex flex-col'>
@@ -316,10 +322,10 @@ const Layout = () => {
           {/* other links */}
           <div className='flex flex-row justify-between items-center p-2'>
             {
-              DashboardFooterData.map((item, index) => 
-              <Link className='flex flex-col p-4 mr-4 justify-center items-center'>
-                <img src={item.icon} alt={`${item.title} icon`} className='h-8 w-8' />
-                <h4 className='font-bold text-primary60'>{item.title}</h4>
+              DashboardFooterData.map((footeritem, footerindex) => 
+              <Link key={footerindex} className='flex flex-col p-4 mr-4 justify-center items-center'>
+                <img src={footeritem.icon} alt={`${footeritem.title} icon`} className='h-8 w-8' />
+                <h4 className='font-bold text-primary60'>{footeritem.title}</h4>
               </Link>
               )
             }
@@ -328,6 +334,7 @@ const Layout = () => {
           {/* <div className='w-[16rem] md:w-[22rem] lg:w-[70rem] h-[4rem] border-black-400 bg-[#0D4D00]'></div> */}
         </div>
       </footer>
+      </main>
     </div>
   );
 };
