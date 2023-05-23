@@ -13,6 +13,7 @@ import Header from './components/navigation/header';
 import RecyclingCompanies from './pages/RecyclingCompanies';
 
 
+
 function App() {
   return (
     <>
