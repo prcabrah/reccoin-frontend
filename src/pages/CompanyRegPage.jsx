@@ -1,6 +1,3 @@
-// import React from 'react'
-// import dropdown from '../../assets/dropdown.svg';
-// import Logo from '../logo';
 import Logo from './../components/logo';
 
 const CompanyRegPage = () => {

@@ -13,9 +13,36 @@ body {
   width: "100%";
   margin:0;
   padding:0;
-}
 
+  /* style scrool bar */
+    /* Customize the scrollbar for Firefox */
+    scrollbar-width: 10px;
+    scrollbar-color: gray;
+  /* Customize the scrollbar for Internet Explorer and Microsoft Edge */
+  /* scrollbar-base-color: #888;
+  scrollbar-face-color: #888;
+  scrollbar-3dlight-color: #f1f1f1;
+  scrollbar-highlight-color: #f1f1f1;
+  scrollbar-track-color: #f1f1f1;
+  scrollbar-arrow-color: #888;
+  scrollbar-shadow-color: #f1f1f1; */
+  
+}
 .bottom-border {
     border-width: 0 0 2px 0;
     border-color: gray;
   }
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: gray;
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #A9CE98;
+    /* #006D44; */
+  }
+

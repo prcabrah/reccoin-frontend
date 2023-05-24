@@ -26,6 +26,9 @@ function App() {
         <Route path="/privacy-policy" element={<Privacy />} />
         <Route path="/partners" element={<Partners />} />
         <Route path="/plastic-deposit" element={<Plastic_deposit_screen />} />
+        <Route path="/prc" element={<RecyclingCompanies />} />
+        <Route path="/user-registration" element={<CompanyRegPage />} />
+        <Route path="/company-registration" element={<RecyclingCompanies />} />
       </Routes>
 
       <Footer />

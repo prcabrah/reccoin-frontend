@@ -10,32 +10,39 @@ export const DashboardLeftNavData = [
     {
         'icon': depositIcon,
         'title': "Deposit Plastic",
+        'id': "dashboard-deposit"
     },
     {
         'icon': companyIcon,
         'title': "Companies",
+        'id': 'dashboard-companies'
     },
     {
         'icon': notificationIcon,
         'title': "Notifications",
+        'id': 'dashboard-notifications'
         
     },
     {
         'icon': settingsIcon,
         'title': "Settings",
+        'id': 'dashboard-settings'
     },
     {
         'icon': historyIcon,
         'title': "Hstory",
+        'id': 'dashboard-history'
         
     },
     {
         'icon': offersIcon,
         'title': "Offers and Contest",
+        'id': 'dashboard-offers'
     },
     {
         'icon': chatIcon,
-        'title': "Chat"
+        'title': "Chat",
+        'id': 'dashboard-chat'
         
     }
 

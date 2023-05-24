@@ -1,9 +1,11 @@
 import React from 'react'
-import DashboardLeftNav from '../components/navigation/DashboardLeftNav'
+import DashboardLeftNav from '../components/dashboard_components/DashboardLeftNav'
+import Layout from '../components/dashboard_components/Layout'
 
 const Dashboard = () => {
   return (
-    <DashboardLeftNav/>
+    <Layout/>
+    // <DashboardLeftNav/>
   )
 }
 
