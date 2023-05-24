@@ -58,7 +58,7 @@ const HomeFooter = () => {
     <div>
         <p className="font-2 font-openSans font-bold mb-4">Subscribe</p>
         <p className="font-2 font-openSans mb-4 font-extralight">
-        Subcribe to our mailing list
+        Subscribe to our mailing list
         </p>
         {/* subscribe input box */}
         <div className="flex flex-row">

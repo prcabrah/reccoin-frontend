@@ -6,6 +6,7 @@ import { DashboardLeftNavData } from '../../data/DashboardLeftNavData';
 import { DashboardFooterData } from '../../data/DashboardFooterData';
 import searchIcon from '../../assets/search.svg'
 import Deposit from './Deposit';
+import HistoryPage from './HistoryPage';
 
 const Layout = () => {
 
@@ -293,10 +294,11 @@ const Layout = () => {
             />
           </div>
         </header>
+
           {/* dashboard content */}
         <div className=''>
             {
-              componentToDisplay == 0 ? <Deposit/> : componentToDisplay == 1 ? "" : ""
+              componentToDisplay == 0 ? <Deposit/> : componentToDisplay == 4 ? <HistoryPage/> : ""
             }
             
         </div>
