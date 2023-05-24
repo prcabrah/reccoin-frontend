@@ -11,6 +11,7 @@ import AboutUs from "./pages/AboutUs";
 import Privacy from "./components/homepage_components/Privacy";
 import Partners from "./pages/Partners";
 import Plastic_deposit_screen from "./pages/plastic_deposit_screen";
+import RecyclingCompanies from "./pages/RecyclingCompanies";
 
 function App() {
   return (
