@@ -10,7 +10,7 @@ const DashboardLeftNav = () => {
     <div className='w-60 bg-primary60 text-white mt-24 p-6 pb-28'>
 
         {/* nav user profile pics */}
-        <div className='w-24 h-24 rounded-full border border-solid border-white mx-auto'>
+        <div className='w-24 h-24 rounded-[50%] flex flex-col justify-center items-center border border-solid border-white mx-auto'>
             <img src={userIcon} alt="user icon"  className='w-12 h-12 ' />
         </div>
 
