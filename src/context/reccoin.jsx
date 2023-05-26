@@ -1,6 +1,8 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+/* eslint-disable react-refresh/only-export-components */
+import { createContext, useContext, useState, useEffect } from 'react';
 import { ethers } from 'ethers';
 import { reccoinABI } from './reccoin-abi';
+import PropTypes from 'prop-types';
 
 const TokenContext = createContext();
 
@@ -19,29 +21,32 @@ export const TokenProvider = ({ children }) => {
   useEffect(() => {
     const initializeContract = async () => {
       try {
-        const ethereumProvider = window.ethereum;
-        await ethereumProvider.request({ method: 'eth_requestAccounts' });
-        const provider = new ethers.providers.Web3Provider(ethereumProvider);
-        setProvider(provider);
+        if (window.ethereum) {
+          await window.ethereum.request({ method: 'eth_requestAccounts' });
+          const ethereumProvider = new ethers.providers.Web3Provider(window.ethereum);
+          setProvider(ethereumProvider);
 
-        const signer = provider.getSigner();
-        const contractAddress = 'x1227993jnbhdjjkskkskk'; // Replace with the actual contract address
-        const contract = new ethers.Contract(contractAddress, reccoinABI, signer);
-        setContract(contract);
+          const signer = ethereumProvider.getSigner();
+          const contractAddress = '0x2A4230ED132ed5cdf340BDf468103d51cf888e18'; // Replace with the actual contract address
+          const contract = new ethers.Contract(contractAddress, reccoinABI, signer);
+          setContract(contract);
 
-        const name = await contract.name();
-        const symbol = await contract.symbol();
-        const decimals = await contract.decimals();
-        const totalSupply = await contract.totalSupply();
-        const yourAccountAddress = 'x63792002jnsnjiiiaubuda'; // Replace with your actual Ethereum address
-        const accountBalance = await contract.balanceOf(yourAccountAddress);
+          const name = await contract.name();
+          const symbol = await contract.symbol();
+          const decimals = await contract.decimals();
+          const totalSupply = await contract.totalSupply();
+          const yourAccountAddress = '0x1928062edfAFbCCb7D1C788B24F6aCdE80869048'; // Replace with your actual Ethereum address
+          const accountBalance = await contract.balanceOf(yourAccountAddress);
 
-        setName(name);
-        setSymbol(symbol);
-        setDecimals(decimals);
-        setTotalSupply(totalSupply);
-        setAccountBalance(accountBalance);
-        setLoading(false);
+          setName(name);
+          setSymbol(symbol);
+          setDecimals(decimals);
+          setTotalSupply(totalSupply);
+          setAccountBalance(accountBalance);
+          setLoading(false);
+        } else {
+          throw new Error('Please install MetaMask or any other Ethereum wallet extension.');
+        }
       } catch (error) {
         console.error('Error initializing contract:', error);
       }
@@ -52,13 +57,76 @@ export const TokenProvider = ({ children }) => {
 
   const transferTokens = async (recipient, amount) => {
     try {
-      const transaction = await contract.transfer(recipient, amount);
-      await transaction.wait();
-      // Perform any additional actions or update state as needed
+      if (contract) {
+        const transaction = await contract.transfer(recipient, amount);
+        await transaction.wait();
+        // Perform any additional actions or update state as needed
+      } else {
+        throw new Error('Contract is not initialized.');
+      }
     } catch (error) {
       console.error('Error transferring tokens:', error);
     }
   };
+
+    // Add the mintTokens and burnTokens functions
+  const mintTokens = async (account, amount) => {
+    try {
+      if (contract) {
+        const transaction = await contract.mint(account, amount);
+        await transaction.wait();
+        // Perform any additional actions or update state as needed
+      } else {
+        throw new Error('Contract is not initialized.');
+      }
+    } catch (error) {
+      console.error('Error minting tokens:', error);
+    }
+  };
+
+  const burnTokens = async (amount) => {
+    try {
+      if (contract) {
+        const transaction = await contract.burn(amount);
+        await transaction.wait();
+        // Perform any additional actions or update state as needed
+      } else {
+        throw new Error('Contract is not initialized.');
+      }
+    } catch (error) {
+      console.error('Error burning tokens:', error);
+    }
+  };
+
+  const approveTokens = async (spender, amount) => {
+    try {
+      if (contract) {
+        const transaction = await contract.approve(spender, amount);
+        await transaction.wait();
+        // Perform any additional actions or update state as needed
+      } else {
+        throw new Error('Contract is not initialized.');
+      }
+    } catch (error) {
+      console.error('Error approving tokens:', error);
+    }
+  };
+
+  const transferFrom = async (sender, recipient, amount) => {
+    try {
+      if (contract) {
+        const transaction = await contract.transferFrom(sender, recipient, amount);
+        await transaction.wait();
+        // Perform any additional actions or update state as needed
+      } else {
+        throw new Error('Contract is not initialized.');
+      }
+    } catch (error) {
+      console.error('Error transferring tokens from:', error);
+    }
+  };
+
+  
 
   return (
     <TokenContext.Provider
@@ -69,10 +137,19 @@ export const TokenProvider = ({ children }) => {
         totalSupply,
         accountBalance,
         loading,
+        provider, // Include the provider in the context value
         transferTokens,
+        mintTokens,
+        burnTokens,
+        approveTokens,
+        transferFrom,
       }}
     >
       {children}
     </TokenContext.Provider>
   );
+};
+
+TokenProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };
