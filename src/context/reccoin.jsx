@@ -4,7 +4,7 @@ import { ethers } from 'ethers';
 import { reccoinABI } from './reccoin-abi';
 import PropTypes from 'prop-types';
 
-const TokenContext = createContext();
+export const TokenContext = createContext();
 
 export const useToken = () => useContext(TokenContext);
 
@@ -22,13 +22,16 @@ export const TokenProvider = ({ children }) => {
     const initializeContract = async () => {
       try {
         if (window.ethereum) {
-          await window.ethereum.request({ method: 'eth_requestAccounts' });
+          // await window.ethereum.request({ method: 'eth_requestAccounts' });
           const ethereumProvider = new ethers.providers.Web3Provider(window.ethereum);
+          // MetaMask requires requesting permission to connect users accounts
+          await ethereumProvider.send("eth_requestAccounts", []);
           setProvider(ethereumProvider);
 
           const signer = ethereumProvider.getSigner();
           const contractAddress = '0x2A4230ED132ed5cdf340BDf468103d51cf888e18'; // Replace with the actual contract address
           const contract = new ethers.Contract(contractAddress, reccoinABI, signer);
+          console.log(contract);
           setContract(contract);
 
           const name = await contract.name();
@@ -131,6 +134,7 @@ export const TokenProvider = ({ children }) => {
   return (
     <TokenContext.Provider
       value={{
+        contract,
         name,
         symbol,
         decimals,

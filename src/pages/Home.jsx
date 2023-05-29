@@ -7,24 +7,26 @@ import Recycling from '../components/homepage_components/Recycling';
 import HowItWorks from '../components/homepage_components/howItWorks';
 import ReccoinAsaService from '../components/homepage_components/ReccoinAsaService';
 import HomeFooter from '../components/homepage_components/HomeFooter';
-
-// import CompanyRegPage from './CompanyRegPage';
-
-
+import Header from '../components/navigation/Header';
+import Footer from '../components/footer';
 
 const Home = () => {
   return (
-    <>
-      <Hero /> 
-      <ReccoinAsaService/>
-      <EarnReccoinReward />
-      <About />
-      <Recycling/>
-      <HowItWorks/>
-      <LatestNews />
-      <Faq />
-      <HomeFooter/>
-    </>
+    <div>
+      <Header/>
+      <div className='max-w-[928px] mx-auto'>
+        <Hero /> 
+        <ReccoinAsaService/>
+        <EarnReccoinReward />
+        <About />
+        <Recycling/>
+        <HowItWorks/>
+        <LatestNews />
+        <Faq />
+        <HomeFooter/>
+      </div>
+      <Footer />
+    </div>
   );
 };
 export default Home;
