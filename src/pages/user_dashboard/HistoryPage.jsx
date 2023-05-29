@@ -1,8 +1,10 @@
 import React from "react";
+import Layout from "../../components/dashboard_components/Layout";
 
 const HistoryPage = () => {
   return (
-    <div className="w-3/4 bg-white h-full flex border-2 border-blue-200 ml-12">
+    <Layout dashboard_content={
+      <div className="w-3/4 bg-white h-full flex border-2 border-blue-200 ml-12">
       <div className="w-3/4 p-4">
         <h1 className=" text-3xl font-black text-primary40 py-4">History</h1>
         <div className="m-4">
@@ -36,6 +38,7 @@ const HistoryPage = () => {
         </button>
       </div>
     </div>
+    } />
   );
 };
 

@@ -6,12 +6,9 @@ import { DashboardLeftNavData } from '../../data/DashboardLeftNavData';
 import { DashboardFooterData } from '../../data/DashboardFooterData';
 import searchIcon from '../../assets/search.svg'
 import Deposit from './Deposit';
-import HistoryPage from './HistoryPage';
+import HistoryPage from '../../pages/user_dashboard/HistoryPage';
 
-const Layout = () => {
-
-  // set company to display based on index
-  const [componentToDisplay, setComponentToDisplay] = useState('')
+const Layout = ({dashboard_content}) => {
  
   return (
     <div>
@@ -31,7 +28,7 @@ const Layout = () => {
       {/* left side bar */}
       <aside
         id='default-sidebar'
-        className='fixed top-0 left-0 top-20 z-40 bg-[#0D4D00] items-center border-2 border-[#0D4D00] w-[20%] h-screen overflow-y-scroll transition-transform -translate-x-full sm:translate-x-0 mb-20'
+        className='fixed left-0 z-40 bg-[#0D4D00] items-center border-2 border-[#0D4D00] w-[20%] h-screen overflow-y-scroll transition-transform -translate-x-full sm:translate-x-0 mb-20'
         aria-label='Sidebar'
       >
         <div className='p-4 absolute left-12'>
@@ -54,11 +51,11 @@ const Layout = () => {
         </div>
 
         {/*  menu items*/}
-        <div className='h-full px-3  absolute top-40 left-8  py-4 overflow-y-auto  dark:bg-gray-800'>
-         <ul className='space-y-2 text-white font-medium'>
+        <div className='h-full px-3  absolute top-40 left-8  py-4 dark:bg-gray-800'>
+         <ul className='space-y-2 text-white font-medium '>
          {
             DashboardLeftNavData.map((item, index) =>
-            <Link key={index} onClick={() => setComponentToDisplay(index)} className='flex flex-row my-4 py-4 border-b justify-left items-center border-[#71b453] hover: border-white '>
+            <Link to={item.userlink} key={index} className='flex flex-row my-4 py-4 border-b justify-left items-center border-[#71b453] hover: border-white '>
                 <img src={item.icon} alt="link logo" className='mr-4' />
                 <h4 className='text-2 font-montserrat'>{item.title}</h4>
             </Link>
@@ -272,7 +269,7 @@ const Layout = () => {
 
 
       {/* card component: header and content of dashboard */}
-      <main className='absolute right-0 top-20 mb-20 w-[80%] overflow-hidden bg-[#F8F9FB]'>
+      <main className='absolute right-0 mb-20 w-[80%] overflow-hidden bg-[#F8F9FB]'>
         {/* dash board header */}
         {/* w-[16rem] md:w-[22rem] lg:w-[70rem] */}
         <header className='p-4 border-black-700 flex flex-row justify-around items-center'>
@@ -297,9 +294,10 @@ const Layout = () => {
 
           {/* dashboard content */}
         <div className=''>
-            {
+            {/* {
               componentToDisplay == 0 ? <Deposit/> : componentToDisplay == 4 ? <HistoryPage/> : ""
-            }
+            } */}
+            {dashboard_content}
             
         </div>
     
