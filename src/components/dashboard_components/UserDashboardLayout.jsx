@@ -54,7 +54,7 @@ const UserDashboardLayout = ({dashboard_content}) => {
          <ul className='space-y-2 text-white font-medium '>
          {
             UserDashboardNavData.map((item, index) =>
-            <Link to={item.userlink} key={index} className='flex flex-row my-4 py-4 border-b justify-left items-center border-[#71b453] hover: border-white '>
+            <Link to={item.link} key={index} className='flex flex-row my-4 py-4 border-b justify-left items-center border-[#71b453] hover: border-white '>
                 <img src={item.icon} alt="link logo" className='mr-4' />
                 <h4 className='text-2 font-montserrat'>{item.title}</h4>
             </Link>

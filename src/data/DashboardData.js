@@ -38,14 +38,14 @@ export const UserDashboardNavData = [
         'icon': historyIcon,
         'title': "Hstory",
         'id': 'dashboard-history',
-        'userlink': '/user-dashboard/history',
+        'link': '/user-dashboard/history',
         
     },
     {
         'icon': offersIcon,
         'title': "Offers and Contest",
         'id': 'dashboard-offers',
-        'link': '',
+        'link': '/user-dashboard/offers',
     },
     {
         'icon': chatIcon,

@@ -19,6 +19,7 @@ import UserDashboard from "./pages/UserDashboard";
 import CompanyDashboard from "./pages/CompanyDashboard";
 import CompanyDashboardLayout from "./components/dashboard_components/CompanyDashboardLayout";
 import CompanyDashboardSettings from "./pages/company_dashboard/DashboardCompanySettings";
+import OffersPage from "./pages/user_dashboard/OffersPage";
 
 function App() {
   return (
@@ -41,12 +42,13 @@ function App() {
         <Route path="/user-dashboard" element={<UserDashboard/>} />
         <Route path="/user-dashboard/settings" element={<DashboardUserSettings/>} />
         <Route path="/user-dashboard/history" element={<HistoryPage/>} />
+        <Route path="/user-dashboard/offers" element={<OffersPage/>} />
+
          {/* company dashboard route */}
         <Route path="/company-dashboard" element={<CompanyDashboard/>} />
         <Route path="/company-dashboard/settings" element={<CompanyDashboardSettings/>} />
         {/* <Route path="/company-dashboard/history" element={<HistoryPage/>} /> */}
       </Routes>
-
     </>
   );
 }
