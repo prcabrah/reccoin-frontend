@@ -6,9 +6,8 @@ import { UserDashboardNavData } from '../../data/DashboardData';
 import { DashboardFooterData } from '../../data/DashboardFooterData';
 import searchIcon from '../../assets/search.svg'
 import Deposit from './Deposit';
-import HistoryPage from '../../pages/user_dashboard/HistoryPage';
 
-const UserDashboardLayout = ({dashboard_content}) => {
+const UserDashboardLayout = ({dashboard_content, active_link}) => {
  
   return (
     <div>
@@ -50,12 +49,13 @@ const UserDashboardLayout = ({dashboard_content}) => {
         </div>
 
         {/*  menu items*/}
-        <div className='h-full px-3  absolute top-40 left-8  py-4 dark:bg-gray-800'>
-         <ul className='space-y-2 text-white font-medium '>
+        <div className='h-full  absolute top-40 w-full py-4 dark:bg-gray-800'>
+         <ul className='text-white font-medium '>
          {
             UserDashboardNavData.map((item, index) =>
-            <Link to={item.link} key={index} className='flex flex-row my-4 py-4 border-b justify-left items-center border-[#71b453] hover: border-white '>
-                <img src={item.icon} alt="link logo" className='mr-4' />
+            <Link to={item.link} key={index} 
+              className={`w-full flex flex-row px-4 py-2 justify-left items-center bg-${item.title == active_link ? 'white' : ''} text-${item.title == active_link ? 'primary60' : 'white'}`}>
+                <img src={`${item.title == active_link ? item.green_icon : item.white_icon }`} alt={`${item.title} logo`} className='mr-4' />
                 <h4 className='text-2 font-montserrat'>{item.title}</h4>
             </Link>
             )

@@ -1,54 +1,65 @@
-import settingsIcon from '../assets/settings-ic.svg'
+import settingsWhiteIcon from '../assets/settingsWhite.svg'
+import settingsGreenIcon from '../assets/settingsGreen.svg'
 import depositIcon from '../assets/deposit-ic.svg'
 import companyIcon from '../assets/company-ic.svg'
-import chatIcon from '../assets/chat-ic.svg'
-import offersIcon from '../assets/offers-ic.svg'
+import chatWhiteIcon from '../assets/chatWhite.svg'
+import chatGreenIcon from '../assets/chatGreen.svg'
+import offersWhiteIcon from '../assets/offersWhite.svg'
+import offersGreenIcon from '../assets/offersGreen.svg'
 import notificationIcon from '../assets/notification-ic.svg'
-import historyIcon from '../assets/history-ic.svg'
+import historyWhiteIcon from '../assets/historyWhite.svg'
+import historyGreenIcon from '../assets/historyGreen.svg'
 import dashboardIcon from '../assets/dashboard.svg'
 
 export const UserDashboardNavData = [
     {
-        'icon': dashboardIcon,
         'title': "Dashboard",
+        'white_icon': dashboardIcon,
+        'green_icon': dashboardIcon,
         'id': "dashboard-deposit",
         'link': '/user-dashboard'
 
     },
     {
-        'icon': companyIcon,
+        'white_icon': companyIcon,
+        'green_icon': companyIcon,
         'title': "Companies",
         'id': 'dashboard-companies',
         'link': ''
     },
     {
-        'icon': notificationIcon,
+        'white_icon': notificationIcon,
+        'green_icon': notificationIcon,
         'title': "Notifications",
         'id': 'dashboard-notifications',
         'link': ''
         
     },
     {
-        'icon': settingsIcon,
+        'white_icon': settingsWhiteIcon,
+        'green_icon': settingsGreenIcon,
         'title': "Settings",
         'id': 'dashboard-settings',
         'link': '/user-dashboard/settings',
     },
     {
-        'icon': historyIcon,
-        'title': "Hstory",
+        'white_icon': historyWhiteIcon,
+        'green_icon': historyGreenIcon,
+        'title': "History",
         'id': 'dashboard-history',
         'link': '/user-dashboard/history',
         
     },
     {
-        'icon': offersIcon,
+        'white_icon': offersWhiteIcon,
+        'green_icon': offersGreenIcon,
         'title': "Offers and Contest",
         'id': 'dashboard-offers',
         'link': '/user-dashboard/offers',
     },
     {
-        'icon': chatIcon,
+        'white_icon': chatWhiteIcon,
+        'green_icon': chatGreenIcon,
         'title': "Chat",
         'id': 'dashboard-chat',
         'link': '',
@@ -58,10 +69,12 @@ export const UserDashboardNavData = [
 
 export const CompanyDashboardNavData = [
     {
-        'icon': dashboardIcon,
         'title': "Dashboard",
-        'id': "company-ashboard",
+        'white_icon': dashboardIcon,
+        'green_icon': dashboardIcon,
+        'id': "dashboard-deposit",
         'link': '/company-dashboard'
+
     },
     {
         'icon': companyIcon,
@@ -70,39 +83,45 @@ export const CompanyDashboardNavData = [
         'link': ''
     },
     {
-        'icon': notificationIcon,
+        'white_icon': notificationIcon,
+        'green_icon': notificationIcon,
         'title': "Notifications",
         'id': 'dashboard-notifications',
-        'userlink': '',
         'link': ''
         
     },
     {
-        'icon': settingsIcon,
+        'white_icon': settingsWhiteIcon,
+        'green_icon': settingsGreenIcon,
         'title': "Settings",
         'id': 'dashboard-settings',
         'link': '/company-dashboard/settings',
     },
     {
-        'icon': historyIcon,
+        'white_icon': historyWhiteIcon,
+        'green_icon': historyGreenIcon,
         'title': "Hstory",
         'id': 'dashboard-history',
         'link': '/company-dashboard/history',
         
     },
     {
-        'icon': offersIcon,
+        'white_icon': offersWhiteIcon,
+        'green_icon': offersGreenIcon,
         'title': "Offers and Contest",
         'id': 'dashboard-offers',
-        'link': ''
+        'link': '/company-dashboard/offers',
     },
     {
-        'icon': chatIcon,
+        'white_icon': chatWhiteIcon,
+        'green_icon': chatGreenIcon,
         'title': "Chat",
         'id': 'dashboard-chat',
-        'link': ''
+        'link': '',
     }
 
 ]
+
+
 
 

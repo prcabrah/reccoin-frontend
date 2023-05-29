@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import settingsIcon from '../../assets/settings-ic.svg'
+import settingsIcon from '../../assets/settingsWhite.svg'
 import { SettingsData } from '../../data/SettingsData'
 import closeIcon from '../../assets/close.svg'
 import { useState } from 'react'

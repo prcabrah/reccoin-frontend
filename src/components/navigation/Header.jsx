@@ -37,7 +37,7 @@ const [selectedOption, setSelectedOption] = useState('');
                     <Link to="/contact-us">CONTACT US</Link>
                 </li>
                 <li className='mr-4 hover:underline'>
-                    <Link to="/dashboard">DASHBOARD</Link>
+                    <Link to="/user-dashboard">DASHBOARD</Link>
                 </li>
                 {/* dropdown register menu */}
                 {/* <li clas>

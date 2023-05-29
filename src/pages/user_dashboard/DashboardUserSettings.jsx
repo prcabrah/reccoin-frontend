@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
-import settingsIcon from '../../assets/settings-ic.svg'
-import Layout from '../../components/dashboard_components/UserDashboardLayout'
+import settingsIcon from '../../assets/settingsWhite.svg'
 import { SettingsData } from '../../data/SettingsData'
 import closeIcon from '../../assets/close.svg'
 import { useState } from 'react'
+import UserDashboardLayout from '../../components/dashboard_components/UserDashboardLayout'
 
  // switch button functional component
  const SwitchButton = ({toggleNotification, label, toggleValue}) => {
@@ -140,7 +140,7 @@ const DashboardUserSettings = () => {
   };
 
   return (  
-    <Layout dashboard_content={
+    <UserDashboardLayout active_link={'Settings'} dashboard_content={
 
         <div className='bg-white ml-12 w-3/4 border-2 border-[#ECECEC]'>
       
