@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "../../components/dashboard_components/Layout";
+import Layout from "../../components/dashboard_components/UserDashboardLayout";
 
 const HistoryPage = () => {
   return (

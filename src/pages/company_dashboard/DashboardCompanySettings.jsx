@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
 import settingsIcon from '../../assets/settings-ic.svg'
-import Layout from '../../components/dashboard_components/UserDashboardLayout'
 import { SettingsData } from '../../data/SettingsData'
 import closeIcon from '../../assets/close.svg'
 import { useState } from 'react'
+import CompanyDashboardLayout from '../../components/dashboard_components/CompanyDashboardLayout'
 
  // switch button functional component
  const SwitchButton = ({toggleNotification, label, toggleValue}) => {
@@ -19,9 +19,11 @@ import { useState } from 'react'
 // profile settings content
 const ProfileSettings = ({toggleClose}) => {
 
-  const [firstName, setFirstName] = useState('')
-  const [lastName, setLastName] = useState('')
-  const [emailAddress, setEmailAddress] = useState('')
+  const [companyName, setCompanyName] = useState('')
+  const [motto, setMotto] = useState('')
+  const [twitter, setTwitter] = useState('')
+  const [linkedIn, setLinkedIn] = useState('')
+  const [facebook, setFacebook] = useState('')
 
   return <div className='bg-[#005232] w-full flex flex-col justify-start text-white p-4'>
     {/* close button */}
@@ -29,19 +31,31 @@ const ProfileSettings = ({toggleClose}) => {
       <img src={closeIcon} alt="close-icon" className=' w-8 h-8'/>
     </button>
     <h1 className='font-bold my-8'>Profile Settings</h1>
-    {/* first name */}
-    <label htmlFor="firstName" className='mb-4'>First Name</label>
-    <input type="text" name="firstName" id="firstName" onChange={(fn) => setFirstName(fn.target.value)} 
+    {/* company name */}
+    <label htmlFor="companyName" className='mb-4'>Company Name</label>
+    <input type="text" name="companyName" id="companyName" onChange={(com) => setCompanyName(com.target.value)} 
       className='outline-none bg-[#71B453] p-2 rounded-lg mb-4'
     />
-    {/* last name */}
-    <label htmlFor="lastName" className='mb-4'>Last Name</label>
-    <input type="text" name="lastName" id="lastName" onChange={(ln) => setLastName(ln.target.value)}
+    {/* motto */}
+    <label htmlFor="motto" className='mb-4'>Motto</label>
+    <input type="text" name="motto" id="motto" onChange={(mot) => setMotto(mot.target.value)}
       className='outline-none bg-[#71B453] p-2 rounded-lg mb-4'
     />
-    {/* email */}
-    <label htmlFor="email" className='mb-4'>Email</label>
-    <input type="email" name="email" id="email" onChange={(eml) => setEmailAddress(eml.target.value)}
+
+    <h1 className='font-bold my-4'>Social Profiles</h1>
+     {/* twitter */}
+     <label htmlFor="twitter" className='mb-4'>Twitter</label>
+    <input type="twitter" name="twitter" id="twitter" onChange={(twt) => setTwitter(twt.target.value)}
+      className='outline-none bg-[#71B453] p-2 rounded-lg mb-4'
+    />
+    {/* linkedin */}
+    <label htmlFor="linkedin" className='mb-4'>LinkedIn</label>
+    <input type="linkedin" name="linkedin" id="linkedin" onChange={(lnk) => setLinkedIn(lnk.target.value)}
+      className='outline-none bg-[#71B453] p-2 rounded-lg mb-4'
+    />
+     {/* linkedin */}
+     <label htmlFor="facebook" className='mb-4'>Facebook</label>
+    <input type="facebook" name="facebook" id="facebook" onChange={(lnk) => setFacebook(lnk.target.value)}
       className='outline-none bg-[#71B453] p-2 rounded-lg mb-4'
     />
     {/* submit button */}
@@ -53,16 +67,22 @@ const ProfileSettings = ({toggleClose}) => {
 const NotificationSettings = ({toggleClose}) => {
 
   // set toggle state
-  const [contestNotification, setContestNotification] = useState(true);
+  const [approvedNotification, setapprovedNotification] = useState(true);
+  const [transactionNotification, settransactionNotification] = useState(true);
   const [depositNotification, setDepositNotification] = useState(true);
 
-  // toggle functions for contest notification
-  const toggleContestNotification = () => {
-    setContestNotification(!contestNotification)
+  // toggle functions for approved notification
+  const toggleApprovedNotification = () => {
+    setapprovedNotification(!approvedNotification)
   };
 
-  // toggle functions for deposit notification
-  const toggleDepositNotification = () => {
+  // toggle functions for transaction notification
+  const toggleTransactionNotification = () => {
+    settransactionNotification(!transactionNotification)
+  };
+
+   // toggle functions for deposit notification
+   const toggleDepositNotification = () => {
     setDepositNotification(!depositNotification)
   };
 
@@ -72,8 +92,11 @@ const NotificationSettings = ({toggleClose}) => {
       <img src={closeIcon} alt="close-icon" className=' w-8 h-8'/>
     </button>
     <h1 className='font-bold my-8'>Notification Settings</h1>
-    <SwitchButton label={"Disable Contest Notifications"} toggleNotification={toggleContestNotification} toggleValue={contestNotification} />
-    <SwitchButton label={"Disable Deposit Notifications"} toggleNotification={toggleDepositNotification} toggleValue={depositNotification}/>
+    <SwitchButton label={"Disable  Approved Notifications"} toggleNotification={toggleApprovedNotification} toggleValue={approvedNotification} />
+    <SwitchButton label={"Disable  Pending Transactions Notifications"} toggleNotification={toggleTransactionNotification} toggleValue={transactionNotification}/>
+    <SwitchButton label={"Disable  Successful Deposit Notifications"} toggleNotification={toggleDepositNotification} toggleValue={depositNotification} />
+    
+    
      {/* submit button */}
      <button className='w-[60%] border-2 border-white rounded-lg p-2 bg-[#006D44] my-6'>UPDATE</button>
   </div>
@@ -110,7 +133,7 @@ const NewsAndUpdateSettings = ({toggleClose}) => {
 }
 
 
-const DashboardUserSettings = () => {
+const CompanyDashboardSettings = () => {
 
     // set company to display based on index
     const [componentToDisplay, setComponentToDisplay] = useState(0)
@@ -122,7 +145,7 @@ const DashboardUserSettings = () => {
   
   return (
     
-    <Layout dashboard_content={
+    <CompanyDashboardLayout dashboard_content={
 
         <div className='bg-white ml-12 w-3/4 border-2 border-[#ECECEC]'>
       
@@ -167,4 +190,4 @@ const DashboardUserSettings = () => {
   )
 }
 
-export default DashboardUserSettings
+export default CompanyDashboardSettings

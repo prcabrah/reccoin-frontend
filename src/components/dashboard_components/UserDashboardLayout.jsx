@@ -2,17 +2,16 @@ import { useRef, useState } from 'react';
 import Logo from '../logo';
 import menuIcon from '../../assets/menu-ic.svg'
 import { Link } from 'react-router-dom';
-import { DashboardLeftNavData } from '../../data/DashboardLeftNavData';
+import { UserDashboardNavData } from '../../data/DashboardData';
 import { DashboardFooterData } from '../../data/DashboardFooterData';
 import searchIcon from '../../assets/search.svg'
 import Deposit from './Deposit';
 import HistoryPage from '../../pages/user_dashboard/HistoryPage';
 
-const Layout = ({dashboard_content}) => {
+const UserDashboardLayout = ({dashboard_content}) => {
  
   return (
     <div>
-
       {/* toggle menu button */}
       <button
         data-drawer-target='default-sidebar'
@@ -54,7 +53,7 @@ const Layout = ({dashboard_content}) => {
         <div className='h-full px-3  absolute top-40 left-8  py-4 dark:bg-gray-800'>
          <ul className='space-y-2 text-white font-medium '>
          {
-            DashboardLeftNavData.map((item, index) =>
+            UserDashboardNavData.map((item, index) =>
             <Link to={item.userlink} key={index} className='flex flex-row my-4 py-4 border-b justify-left items-center border-[#71b453] hover: border-white '>
                 <img src={item.icon} alt="link logo" className='mr-4' />
                 <h4 className='text-2 font-montserrat'>{item.title}</h4>
@@ -267,11 +266,10 @@ const Layout = ({dashboard_content}) => {
 
       </aside>
 
-
       {/* card component: header and content of dashboard */}
       <main className='absolute right-0 mb-20 w-[80%] overflow-hidden bg-[#F8F9FB]'>
+
         {/* dash board header */}
-        {/* w-[16rem] md:w-[22rem] lg:w-[70rem] */}
         <header className='p-4 border-black-700 flex flex-row justify-around items-center'>
           <div className='w-46 h-46 items-center '>
             <Logo fill='#0D4D00' w='56' h='56' />
@@ -294,33 +292,28 @@ const Layout = ({dashboard_content}) => {
 
           {/* dashboard content */}
         <div className=''>
-            {/* {
-              componentToDisplay == 0 ? <Deposit/> : componentToDisplay == 4 ? <HistoryPage/> : ""
-            } */}
-            {dashboard_content}
-            
+            {dashboard_content ? dashboard_content : <Deposit/>}
         </div>
-    
 
           {/* dashboard footer */}
-      <footer className='w-[100%] p-4 h-30 bg-gray-200 text-black '>
+      <footer className='w-[100%] px-4 py-2 bg-gray-200 text-black '>
         
         <div className=' flex flex-row item-center italic '>
 
           <div className='flex flex-col'>
             {/* enter to earn a reccoin */}
-            <p className='text-[1rem] md:text-[1.2rem] lg:text-[1.5rem] mt-1 w-[24rem] text-[#000000]'>
+            <p className='text-[0.8rem] md:text-[1rem] lg:text-[1.2rem] mt-1 w-[24rem] text-[#000000] mb-2'>
               Enter to Earn a Reccoin
             </p>
           {/* learn more button*/}
-            <Link className='rounded-[26px] w-40 py-4 px-6 text-[0.6rem] md:text-[0.8rem] lg:text-[1rem] font-medium text-[#fff] bg-[#71B453]'>
+            <Link className='rounded-[26px] w-40 py-2 px-6 text-[0.6rem] md:text-[0.8rem] lg:text-[1rem] font-medium text-[#fff] bg-[#71B453]'>
               LEARN MORE
             </Link>
 
           </div>
 
           {/* other links */}
-          <div className='flex flex-row justify-between items-center p-2'>
+          <div className='flex flex-row justify-between items-center'>
             {
               DashboardFooterData.map((footeritem, footerindex) => 
               <Link key={footerindex} className='flex flex-col p-4 mr-4 justify-center items-center'>
@@ -335,8 +328,9 @@ const Layout = ({dashboard_content}) => {
         </div>
       </footer>
       </main>
+
     </div>
   );
 };
 
-export default Layout;
+export default UserDashboardLayout;
