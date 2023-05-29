@@ -1,4 +1,4 @@
-import Hero from '../components/homepage_components/HeroSection'
+import Hero from '../components/homepage_components/HeroSection';
 import { EarnReccoinReward } from '../components/homepage_components/earnReccoin';
 import LatestNews from '../components/homepage_components/LatestNews.jsx';
 import About from '../components/homepage_components/about';
@@ -13,17 +13,17 @@ import Footer from '../components/footer';
 const Home = () => {
   return (
     <div>
-      <Header/>
-      <div className='max-w-[928px] mx-auto'>
-        <Hero /> 
-        <ReccoinAsaService/>
+      <Header />
+      <div className="max-w-[928px] mx-auto">
+        <Hero />
+        <ReccoinAsaService />
         <EarnReccoinReward />
         <About />
-        <Recycling/>
-        <HowItWorks/>
+        <Recycling />
+        <HowItWorks />
         <LatestNews />
         <Faq />
-        <HomeFooter/>
+        <HomeFooter />
       </div>
       <Footer />
     </div>
