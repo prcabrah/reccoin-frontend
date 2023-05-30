@@ -27,7 +27,7 @@ export const TokenProvider = ({ children }) => {
           setProvider(ethereumProvider);
 
           const signer = ethereumProvider.getSigner();
-          const contractAddress = '0x2A4230ED132ed5cdf340BDf468103d51cf888e18'; // Replace with the actual contract address
+          const contractAddress = '0x835451710F730f06b4AE5978bfD1727322fCFBA9'; // Replace with the actual contract address
           const contract = new ethers.Contract(contractAddress, reccoinABI, signer);
           setContract(contract);
 
