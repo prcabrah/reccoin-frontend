@@ -296,37 +296,37 @@ const UserDashboardLayout = ({dashboard_content, active_link}) => {
         </div>
 
           {/* dashboard footer */}
-      <footer className='w-[100%] px-4 py-2 bg-gray-200 text-black '>
-        
-        <div className=' flex flex-row item-center italic '>
+        <footer className='w-[100%] px-4 py-2 bg-gray-200 text-black '>
+          
+          <div className=' flex flex-row item-center italic '>
 
-          <div className='flex flex-col'>
-            {/* enter to earn a reccoin */}
-            <p className='text-[0.8rem] md:text-[1rem] lg:text-[1.2rem] mt-1 w-[24rem] text-[#000000] mb-2'>
-              Enter to Earn a Reccoin
-            </p>
-          {/* learn more button*/}
-            <Link className='rounded-[26px] w-40 py-2 px-6 text-[0.6rem] md:text-[0.8rem] lg:text-[1rem] font-medium text-[#fff] bg-[#71B453]'>
-              LEARN MORE
-            </Link>
-
-          </div>
-
-          {/* other links */}
-          <div className='flex flex-row justify-between items-center'>
-            {
-              DashboardFooterData.map((footeritem, footerindex) => 
-              <Link key={footerindex} className='flex flex-col p-4 mr-4 justify-center items-center'>
-                <img src={footeritem.icon} alt={`${footeritem.title} icon`} className='h-8 w-8' />
-                <h4 className='font-bold text-primary60'>{footeritem.title}</h4>
+            <div className='flex flex-col'>
+              {/* enter to earn a reccoin */}
+              <p className='text-[0.8rem] md:text-[1rem] lg:text-[1.2rem] mt-1 w-[24rem] text-[#000000] mb-2'>
+                Enter to Earn a Reccoin
+              </p>
+            {/* learn more button*/}
+              <Link className='rounded-[26px] w-40 py-2 px-6 text-[0.6rem] md:text-[0.8rem] lg:text-[1rem] font-medium text-[#fff] bg-[#71B453]'>
+                LEARN MORE
               </Link>
-              )
-            }
-           
+
+            </div>
+
+            {/* other links */}
+            <div className='flex flex-row justify-between items-center'>
+              {
+                DashboardFooterData.map((footeritem, footerindex) => 
+                <Link key={footerindex} className='flex flex-col p-4 mr-4 justify-center items-center'>
+                  <img src={footeritem.icon} alt={`${footeritem.title} icon`} className='h-8 w-8' />
+                  <h4 className='font-bold text-primary60'>{footeritem.title}</h4>
+                </Link>
+                )
+              }
+            
+            </div>
+            {/* <div className='w-[16rem] md:w-[22rem] lg:w-[70rem] h-[4rem] border-black-400 bg-[#0D4D00]'></div> */}
           </div>
-          {/* <div className='w-[16rem] md:w-[22rem] lg:w-[70rem] h-[4rem] border-black-400 bg-[#0D4D00]'></div> */}
-        </div>
-      </footer>
+        </footer>
       </main>
 
     </div>

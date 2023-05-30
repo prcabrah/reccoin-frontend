@@ -1,9 +1,12 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import dropdown from '../../assets/dropdown.svg'
 import Logo from '../logo'
+import { TokenContext } from '../../context/reccoin'
 
 const Header = () => {
+
+    const {connectedAccount} = useContext(TokenContext)
 
 const [selectedOption, setSelectedOption] = useState('');
 
@@ -55,7 +58,9 @@ const [selectedOption, setSelectedOption] = useState('');
                 </li> */}
             </ul>
             {/* connect button */}
-            <button className='rounded text-white bg-primary40 p-2 ml-4'>CONNECT WALLET</button>
+            <button className='rounded text-white bg-primary40 p-2 ml-4'>
+                {connectedAccount ? connectedAccount.slice(0,5) + "..." + connectedAccount.slice(connectedAccount.length-5, connectedAccount.length): " CONNECT WALLET"}
+            </button>
         </div>
   
     </header>

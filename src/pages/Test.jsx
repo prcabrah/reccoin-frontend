@@ -3,13 +3,17 @@ import { TokenContext } from '../context/reccoin'
 
 const Test = () => {
 
-  const {transferTokens, contract} = useContext(TokenContext)
+  const {loading, transferTokens, contract} = useContext(TokenContext)
 
   const [userAddress, setUserAddress] = useState('')
   const [tokenAmt, setTokenAmt] = useState(0)
 
   const TransferToken = () => {
-    transferTokens(userAddress, tokenAmt)
+    if (loading) {
+      alert ("loading...")
+    } else{
+      transferTokens(userAddress, tokenAmt)
+    }
   }
 
   return (
