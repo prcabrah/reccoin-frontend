@@ -146,7 +146,6 @@ export const TokenProvider = ({ children }) => {
         decimals,
         totalSupply,
         accountBalance,
-        loading,
         provider, // Include the provider in the context value
         connectedAccount,
         transferTokens,

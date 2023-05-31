@@ -3,7 +3,7 @@ import UserDashboardLayout from '../components/dashboard_components/UserDashboar
 
 const UserDashboard = () => {
   return (
-    <UserDashboardLayout/>
+    <UserDashboardLayout  active_link={'Dashboard'} />
   )
 }
 

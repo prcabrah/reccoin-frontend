@@ -19,3 +19,5 @@ export const WhitePaper = () => {
   </div>
 </>
 }
+
+export default WhitePaper
