@@ -8,7 +8,9 @@ import searchIcon from '../../assets/search.svg'
 import Deposit from './Deposit';
 import HistoryPage from '../../pages/user_dashboard/HistoryPage';
 
-const CompanyDashboardLayout = ({dashboard_content}) => {
+import { routes } from '../../routes/dashboard/company'
+
+const CompanyDashboardLayout = ({dashboard_content, active_link}) => {
  
   return (
     <div>
@@ -52,14 +54,15 @@ const CompanyDashboardLayout = ({dashboard_content}) => {
         {/*  menu items*/}
         <div className='h-full px-3  absolute top-40 left-8  py-4 dark:bg-gray-800'>
          <ul className='space-y-2 text-white font-medium '>
-         {
-            CompanyDashboardNavData.map((item, index) =>
-            <Link to={item.link} key={index} className='flex flex-row my-4 py-4 border-b justify-left items-center border-[#71b453] hover: border-white '>
-                <img src={item.icon} alt="link logo" className='mr-4' />
-                <h4 className='text-2 font-montserrat'>{item.title}</h4>
-            </Link>
-            )
-        }
+             {
+                 routes.map((route, index) =>
+                     <Link to={route.path} key={index}
+                           className={`w-full flex flex-row px-4 py-2 justify-left items-center bg-${route.name === active_link ? 'white' : ''} text-${route.name === active_link ? 'primary60' : 'white'}`}>
+                         <img src={`${route.name === active_link ? route.green_icon : route.white_icon }`} alt={`${route.name} logo`} className='mr-4' />
+                         <h4 className='text-2 font-montserrat'>{route.name}</h4>
+                     </Link>
+                 )
+             }
          </ul>
         </div>
 
