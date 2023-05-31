@@ -1,6 +1,6 @@
 import React from "react";
-import { GoPrimitiveDot } from "react-icons/go";
-import { FiArrowDown } from "react-icons/fi";
+import arrowDownIcon from '../assets/arrowDown.svg'
+import dotIcon from '../assets/dot.svg'
 
 let companies = [
   "AMX Global Enterprise",
@@ -33,8 +33,8 @@ function Partners() {
               </p>
             </div>
           ))}
-          <div className="w-full flex justify-center">
-            <FiArrowDown color="#404943" className="cursor-pointer" />
+          <div className="w-8 h-8 fixed flex right-[50%] bottom-12 flex justify-center">
+            <img src={arrowDownIcon} alt="load more arrow" className="w-8 h-8"/>
           </div>
         </div>
       </div>

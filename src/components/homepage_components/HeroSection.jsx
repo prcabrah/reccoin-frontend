@@ -1,10 +1,12 @@
 import React from "react";
+import heroImage from "../../assets/home-bgg.png"
+import MediumButton from "../buttons/mediumButton";
 
 const Hero = () => {
   return (
     <>
-      <section className=" border-t-2 mt-20">
-        <div className="my-20 mx-auto bg-herobg bg-contain bg-no-repeat bg-right ">
+      <section className=" border-t-2 mt-20 bg-white">
+        <div className="mt-20 pb-20 mx-auto bg-herobg bg-contain bg-no-repeat  bg-right ">
           <div className=" flex w-[90%] mx-auto justify-start items-start">
             <div className="flex flex-col w-[45%]">
               <h2 className="text-4xl font-bold">RECYCLING</h2>
@@ -13,14 +15,16 @@ const Hero = () => {
                 Revolutionizing Waste Management with Rewards! Turn your Waste
                 into Wealth and Make a Positive Impact on the Planet.
               </p>
-              <button className="text-white font-bold tracking-wide bg-[#006D44] px-8 py-4 rounded-lg mt-8 self-start text-base">
+              {/* <button className="text-white font-bold tracking-wide bg-[#006D44] px-8 py-4 rounded-lg mt-8 self-start text-base">
                 <a href="#">Learn More</a>
-              </button>
+              </button> */}
+               {/* learn more button */}
+             <MediumButton text={"Learn more"} linkto={'/about-us'}/>
             </div>
 
             <div>
               <img
-                src="/src/assets/home-bgg.png"
+                src={heroImage}
                 alt="home-img"
                 className="-mt-28"
               />
