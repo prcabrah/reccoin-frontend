@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 
 const AboutUs = () => {
   return <div className='w-[80%] mx-auto border-2 border-primary40 p-8 rounded-[20px] mt-28 mb-20'>
@@ -7,7 +7,7 @@ const AboutUs = () => {
       //   width: '100%', border: '2px solid black' , padding: '10px',  borderRadius: '20px',
       // }} */}
   
-    <div class="text-xl font-[20px]">
+    <div className="text-xl font-[20px]">
       <h2 className='text-primary40'> ABOUT US</h2>
 
       <p className='text-left'>At Reccoin, we are revolutionizing the way we address the global plastic waste crisis. Our platform provides an innovative solution that incentivizes individuals to take action by collecting waste plastics and rewards them with tokens. By partnering with leading plastic recycling companies, we ensure that these collected plastics are repurposed and recycled, contributing to a sustainable future.</p>
