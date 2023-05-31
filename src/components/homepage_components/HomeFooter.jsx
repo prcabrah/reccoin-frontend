@@ -5,8 +5,8 @@ import emailIcon from '../../assets/email.svg'
 const HomeFooter = () => {
   return   <div className=" w-full bg-primary40 text-white flex flex-row justify-around px-8 py-16">
     {/* footer logo */}
-    <div className="w-16 h-16 items-center">
-        <Logo fill="#fff" w="64" h="64" />
+    <div className=" w-32 h-32 items-center">
+        <Logo fill="#fff" w="120" h="120" />
     </div>
 
     {/* footer Links */}

@@ -4,7 +4,7 @@ import { ethers } from 'ethers';
 import { reccoinABI } from './reccoin-abi';
 import PropTypes from 'prop-types';
 
-const TokenContext = createContext();
+export const TokenContext = createContext();
 
 export const useToken = () => useContext(TokenContext);
 
@@ -14,21 +14,27 @@ export const TokenProvider = ({ children }) => {
   const [decimals, setDecimals] = useState(0);
   const [totalSupply, setTotalSupply] = useState(0);
   const [accountBalance, setAccountBalance] = useState(0);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [provider, setProvider] = useState(null);
   const [contract, setContract] = useState(null);
+  const [connectedAccount, setConnectedAccount] = useState('')
+
 
   useEffect(() => {
     const initializeContract = async () => {
       try {
+        setLoading(true)
         if (window.ethereum) {
-          await window.ethereum.request({ method: 'eth_requestAccounts' });
+          const getAccounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+          // save connected wallet address
+          setConnectedAccount(getAccounts[0])
           const ethereumProvider = new ethers.providers.Web3Provider(window.ethereum);
+          // MetaMask requires requesting permission to connect users accounts
           setProvider(ethereumProvider);
-
           const signer = ethereumProvider.getSigner();
           const contractAddress = '0x835451710F730f06b4AE5978bfD1727322fCFBA9'; // Replace with the actual contract address
           const contract = new ethers.Contract(contractAddress, reccoinABI, signer);
+          console.log('contract =>', contract);
           setContract(contract);
 
           const name = await contract.name();
@@ -45,9 +51,11 @@ export const TokenProvider = ({ children }) => {
           setAccountBalance(accountBalance);
           setLoading(false);
         } else {
+          setLoading(false)
           throw new Error('Please install MetaMask or any other Ethereum wallet extension.');
         }
       } catch (error) {
+        setLoading(false)
         console.error('Error initializing contract:', error);
       }
     };
@@ -131,13 +139,15 @@ export const TokenProvider = ({ children }) => {
   return (
     <TokenContext.Provider
       value={{
+        loading,
+        contract,
         name,
         symbol,
         decimals,
         totalSupply,
         accountBalance,
-        loading,
         provider, // Include the provider in the context value
+        connectedAccount,
         transferTokens,
         mintTokens,
         burnTokens,

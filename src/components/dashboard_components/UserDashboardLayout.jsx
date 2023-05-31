@@ -2,20 +2,16 @@ import { useRef, useState } from 'react';
 import Logo from '../logo';
 import menuIcon from '../../assets/menu-ic.svg'
 import { Link } from 'react-router-dom';
-import { DashboardLeftNavData } from '../../data/DashboardLeftNavData';
+import { UserDashboardNavData } from '../../data/DashboardData';
 import { DashboardFooterData } from '../../data/DashboardFooterData';
 import searchIcon from '../../assets/search.svg'
 import Deposit from './Deposit';
-import HistoryPage from './HistoryPage';
+import { routes } from '../../routes/dashboard/user.jsx'
 
-const Layout = () => {
+const UserDashboardLayout = ({dashboard_content, active_link}) => {
 
-  // set company to display based on index
-  const [componentToDisplay, setComponentToDisplay] = useState('')
- 
   return (
     <div>
-
       {/* toggle menu button */}
       <button
         data-drawer-target='default-sidebar'
@@ -28,10 +24,10 @@ const Layout = () => {
         <img src={menuIcon} alt="" />
       </button>
 
-      {/* left side bar */}
+      {/* left sidebar */}
       <aside
         id='default-sidebar'
-        className='fixed top-0 left-0 top-20 z-40 bg-[#0D4D00] items-center border-2 border-[#0D4D00] w-[20%] h-screen overflow-y-scroll transition-transform -translate-x-full sm:translate-x-0 mb-20'
+        className='fixed left-0 z-40 bg-[#0D4D00] items-center border-2 border-[#0D4D00] w-[20%] h-screen overflow-y-scroll transition-transform -translate-x-full sm:translate-x-0 mb-20'
         aria-label='Sidebar'
       >
         <div className='p-4 absolute left-12'>
@@ -54,16 +50,17 @@ const Layout = () => {
         </div>
 
         {/*  menu items*/}
-        <div className='h-full px-3  absolute top-40 left-8  py-4 overflow-y-auto  dark:bg-gray-800'>
-         <ul className='space-y-2 text-white font-medium'>
-         {
-            DashboardLeftNavData.map((item, index) =>
-            <Link key={index} onClick={() => setComponentToDisplay(index)} className='flex flex-row my-4 py-4 border-b justify-left items-center border-[#71b453] hover: border-white '>
-                <img src={item.icon} alt="link logo" className='mr-4' />
-                <h4 className='text-2 font-montserrat'>{item.title}</h4>
-            </Link>
-            )
-        }
+        <div className='h-full  absolute top-40 w-full py-4 dark:bg-gray-800'>
+         <ul className='text-white font-medium '>
+           {
+             routes.map((route, index) =>
+                 <Link to={route.path} key={index}
+                       className={`w-full flex flex-row px-4 py-2 justify-left items-center bg-${route.name === active_link ? 'white' : ''} text-${route.name === active_link ? 'primary60' : 'white'}`}>
+                   <img src={`${route.name === active_link ? route.green_icon : route.white_icon }`} alt={`${route.name} logo`} className='mr-4' />
+                   <h4 className='text-2 font-montserrat'>{route.name}</h4>
+                 </Link>
+             )
+           }
          </ul>
           {/* <ul className='space-y-2 font-medium'>
             <li>
@@ -270,11 +267,10 @@ const Layout = () => {
 
       </aside>
 
-
       {/* card component: header and content of dashboard */}
-      <main className='absolute right-0 top-20 mb-20 w-[80%] overflow-hidden bg-[#F8F9FB]'>
+      <main className='absolute right-0 mb-20 w-[80%] overflow-hidden bg-[#F8F9FB]'>
+
         {/* dash board header */}
-        {/* w-[16rem] md:w-[22rem] lg:w-[70rem] */}
         <header className='p-4 border-black-700 flex flex-row justify-around items-center'>
           <div className='w-46 h-46 items-center '>
             <Logo fill='#0D4D00' w='56' h='56' />
@@ -296,49 +292,46 @@ const Layout = () => {
         </header>
 
           {/* dashboard content */}
-        <div className=''>
-            {
-              componentToDisplay == 0 ? <Deposit/> : componentToDisplay == 4 ? <HistoryPage/> : ""
-            }
-            
+        <div className='md:container md:mx-auto px-10'>
+            {dashboard_content ? dashboard_content : <Deposit/>}
         </div>
-    
 
           {/* dashboard footer */}
-      <footer className='w-[100%] p-4 h-30 bg-gray-200 text-black '>
-        
-        <div className=' flex flex-row item-center italic '>
+        <footer className='w-[100%] px-4 py-2 bg-gray-200 text-black '>
 
-          <div className='flex flex-col'>
-            {/* enter to earn a reccoin */}
-            <p className='text-[1rem] md:text-[1.2rem] lg:text-[1.5rem] mt-1 w-[24rem] text-[#000000]'>
-              Enter to Earn a Reccoin
-            </p>
-          {/* learn more button*/}
-            <Link className='rounded-[26px] w-40 py-4 px-6 text-[0.6rem] md:text-[0.8rem] lg:text-[1rem] font-medium text-[#fff] bg-[#71B453]'>
-              LEARN MORE
-            </Link>
+          <div className=' flex flex-row item-center italic '>
 
-          </div>
-
-          {/* other links */}
-          <div className='flex flex-row justify-between items-center p-2'>
-            {
-              DashboardFooterData.map((footeritem, footerindex) => 
-              <Link key={footerindex} className='flex flex-col p-4 mr-4 justify-center items-center'>
-                <img src={footeritem.icon} alt={`${footeritem.title} icon`} className='h-8 w-8' />
-                <h4 className='font-bold text-primary60'>{footeritem.title}</h4>
+            <div className='flex flex-col'>
+              {/* enter to earn a reccoin */}
+              <p className='text-[0.8rem] md:text-[1rem] lg:text-[1.2rem] mt-1 w-[24rem] text-[#000000] mb-2'>
+                Enter to Earn a Reccoin
+              </p>
+            {/* learn more button*/}
+              <Link className='rounded-[26px] w-40 py-2 px-6 text-[0.6rem] md:text-[0.8rem] lg:text-[1rem] font-medium text-[#fff] bg-[#71B453]'>
+                LEARN MORE
               </Link>
-              )
-            }
-           
+
+            </div>
+
+            {/* other links */}
+            <div className='flex flex-row justify-between items-center'>
+              {
+                DashboardFooterData.map((footeritem, footerindex) =>
+                <Link key={footerindex} className='flex flex-col p-4 mr-4 justify-center items-center'>
+                  <img src={footeritem.icon} alt={`${footeritem.title} icon`} className='h-8 w-8' />
+                  <h4 className='font-bold text-primary60'>{footeritem.title}</h4>
+                </Link>
+                )
+              }
+
+            </div>
+            {/* <div className='w-[16rem] md:w-[22rem] lg:w-[70rem] h-[4rem] border-black-400 bg-[#0D4D00]'></div> */}
           </div>
-          {/* <div className='w-[16rem] md:w-[22rem] lg:w-[70rem] h-[4rem] border-black-400 bg-[#0D4D00]'></div> */}
-        </div>
-      </footer>
+        </footer>
       </main>
+
     </div>
   );
 };
 
-export default Layout;
+export default UserDashboardLayout;

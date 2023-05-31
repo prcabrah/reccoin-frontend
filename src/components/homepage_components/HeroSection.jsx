@@ -5,8 +5,8 @@ import MediumButton from "../buttons/mediumButton";
 const Hero = () => {
   return (
     <>
-      <section className=" border-t-2 mt-20">
-        <div className="my-20 mx-auto bg-herobg bg-contain bg-no-repeat bg-right ">
+      <section className=" border-t-2 mt-20 bg-white">
+        <div className="mt-20 pb-20 mx-auto bg-herobg bg-contain bg-no-repeat  bg-right ">
           <div className=" flex w-[90%] mx-auto justify-start items-start">
             <div className="flex flex-col w-[45%]">
               <h2 className="text-4xl font-bold">RECYCLING</h2>
