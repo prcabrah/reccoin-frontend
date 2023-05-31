@@ -8,7 +8,8 @@ import chatWhiteIcon from '../../assets/chatWhite.svg'
 import chatGreenIcon from '../../assets/chatGreen.svg'
 import offersWhiteIcon from '../../assets/offersWhite.svg'
 import offersGreenIcon from '../../assets/offersGreen.svg'
-import notificationIcon from '../../assets/notification-ic.svg'
+import notificationWhiteIcon from "../../assets/notificationWhite.svg";
+import notificationGreenIcon from "../../assets/notificationGreen.svg";
 import historyWhiteIcon from '../../assets/historyWhite.svg'
 import historyGreenIcon from '../../assets/historyGreen.svg'
 import dashboardIcon from '../../assets/dashboard.svg'
@@ -17,6 +18,7 @@ import UserDashboard from '../../pages/UserDashboard';
 import DashboardUserSettings from "../../pages/user_dashboard/DashboardUserSettings.jsx";
 import HistoryPage from "../../pages/user_dashboard/HistoryPage.jsx";
 import OffersPage from "../../pages/user_dashboard/OffersPage.jsx";
+import Notifications from '../../pages/user_dashboard/Notifications';
 
 const routes = [
     {
@@ -37,10 +39,10 @@ const routes = [
     },
     {
         name: "Notifications",
-        path: '',
-        component: '',
-        white_icon: notificationIcon,
-        green_icon: notificationIcon,
+        path: '/user-dashboard/notifications',
+        component: Notifications,
+        white_icon: notificationWhiteIcon,
+        green_icon: notificationGreenIcon,
         id: 'dashboard-notifications',
     },
     {

@@ -7,11 +7,13 @@ import companyIcon from '../../assets/company-ic.svg'
 
 import CompanyDashboard from "../../pages/CompanyDashboard.jsx";
 import CompanyDashboardSettings from "../../pages/company_dashboard/DashboardCompanySettings.jsx";
-import notificationIcon from "../../assets/notification-ic.svg";
+import notificationWhiteIcon from "../../assets/notificationWhite.svg";
+import notificationGreenIcon from "../../assets/notificationGreen.svg";
+import Notifications from '../../pages/company_dashboard/Notifications';
 
 const routes = [
     {
-        name: 'Companies',
+        name: 'Dashboard',
         path: '/company-dashboard',
         white_icon: companyIcon,
         green_icon: companyIcon,
@@ -19,21 +21,22 @@ const routes = [
         component: CompanyDashboard
     },
     {
-        name: 'Company Settings',
+        name: "Notifications",
+        path: '/company-dashboard/notifications',
+        component: Notifications,
+        white_icon: notificationWhiteIcon,
+        green_icon: notificationGreenIcon,
+        id: 'dashboard-notifications',
+    },
+    {
+        name: 'Settings',
         path: '/company-dashboard/settings',
         component: CompanyDashboardSettings,
         white_icon: settingsWhiteIcon,
         green_icon: settingsGreenIcon,
         id: "company-settings",
     },
-    {
-        name: "Notifications",
-        path: '',
-        component: '',
-        white_icon: notificationIcon,
-        green_icon: notificationIcon,
-        id: 'dashboard-notifications',
-    },
+    
 ];
 
 const renderRoutes = (routes, basePath = '') => {

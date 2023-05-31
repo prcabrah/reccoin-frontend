@@ -4,6 +4,7 @@ import approved from "../../assets/approved.png";
 import pending from "../../assets/pending.png";
 import search from "../../assets/search.png";
 import filter from "../../assets/filter.png";
+import CompanyDashboardLayout from "../../components/dashboard_components/CompanyDashboardLayout";
 
 const Notifications = () => {
   const [open, setOpen] = useState(false);
@@ -12,7 +13,7 @@ const Notifications = () => {
     setOpen(!open);
   };
   return (
-    <>
+    <CompanyDashboardLayout active_link={'/company-dashboard/notifications'} dashboard_content={
       <div className="w-[28rem] md:w-[36rem] lg:w-[47rem] h-[30rem] mx-8 border-4 border-[#F8F9FB]-300">
         <div className="flex flex-col items-start justify-start px-3">
           <div className="flex gap-8 items-center mt-2 justify-between w-full">
@@ -212,7 +213,8 @@ const Notifications = () => {
           </div>
         </div>
       </div>
-    </>
+    }
+    />
   );
 };
 
