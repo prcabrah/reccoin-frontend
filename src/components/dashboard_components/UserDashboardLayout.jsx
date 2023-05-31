@@ -292,7 +292,7 @@ const UserDashboardLayout = ({dashboard_content, active_link}) => {
         </header>
 
           {/* dashboard content */}
-        <div className=''>
+        <div className='md:container md:mx-auto px-10'>
             {dashboard_content ? dashboard_content : <Deposit/>}
         </div>
 
