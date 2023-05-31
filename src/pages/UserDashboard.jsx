@@ -57,16 +57,16 @@ const TransactionTab = ({ toggleClose }) => {
 
             <div className="bg-[#ffffff] flex rounded-lg m-2 p-2">
                 <div className="w-full items-center p-1">
-                    <div className="font-sans font-bold uppercase text-black text-xs">Total Value</div>
-                    <div className="text-green-800 text-sm">55</div>
+                    <div className="font-sans font-bold uppercase text-black text-[12px]">Total Value</div>
+                    <div className="text-green-800 text-[10px]">55</div>
                 </div>
                 <div className="w-full items-center p-1">
-                    <div className="font-sans font-bold uppercase text-black text-xs">TOTAL WEIGHT</div>
-                    <div className="text-green-800 text-sm">100 KG</div>
+                    <div className="font-sans font-bold uppercase text-black text-[12px]">TOTAL WEIGHT</div>
+                    <div className="text-green-800 text-[10px]">100 KG</div>
                 </div>
                 <div className="w-full items-center p-1">
-                    <div className="font-sans font-bold uppercase text-black text-sm">TRANSACTION ID</div>
-                    <div className="text-green-800 text-[12px]"><i>XXXX....XXX....XXX...XXX...</i></div>
+                    <div className="font-sans font-bold uppercase text-black text-[12px]">TRANSACTION ID</div>
+                    <div className="text-green-800 text-[10px]"><i>XXXX....XXX....XXX...XXX...</i></div>
                 </div>
                 <div className="w-full items-center p-1 text-right">
                     <div className="uppercase font-bold text-black p-2 text-xs"><i className="">X</i></div>
@@ -75,91 +75,91 @@ const TransactionTab = ({ toggleClose }) => {
             </div>
             <div className="bg-[#ffffff] flex rounded-lg m-2 p-2">
                 <div className="w-full items-center p-1">
-                    <div className="font-sans font-bold uppercase text-black text-xs">Total Value</div>
-                    <div className="text-green-800 text-sm">55</div>
+                    <div className="font-sans font-bold uppercase text-black text-[12px]">Total Value</div>
+                    <div className="text-green-800 text-[10px]">55</div>
                 </div>
                 <div className="w-full items-center p-1">
-                    <div className="font-sans font-bold uppercase text-black text-xs">TOTAL WEIGHT</div>
-                    <div className="text-green-800 text-sm">100 KG</div>
+                    <div className="font-sans font-bold uppercase text-black text-[12px]">TOTAL WEIGHT</div>
+                    <div className="text-green-800 text-[10px]">100 KG</div>
                 </div>
                 <div className="w-full items-center p-1">
-                    <div className="font-sans font-bold uppercase text-black text-sm">TRANSACTION ID</div>
-                    <div className="text-green-800 text-[12px]"><i>XXXX....XXX....XXX...XXX...</i></div>
+                    <div className="font-sans font-bold uppercase text-black text-[12px]">TRANSACTION ID</div>
+                    <div className="text-green-800 text-[10px]"><i>XXXX....XXX....XXX...XXX...</i></div>
                 </div>
                 <div className="w-full items-center p-1 text-right">
-                    <div className="uppercase font-bold text-black p-2 text-xs"><i className="">X</i></div>
+                    <div className="uppercase font-bold text-black p-2 text-[12px]"><i className="">X</i></div>
                     <div className="text-green-800 text-[8px]"><span><em>5th May 2020, 12:23</em></span></div>
                 </div>+__
             </div>
             <div className="bg-[#ffffff] flex rounded-lg m-2 p-2">
                 <div className="w-full items-center p-1">
-                    <div className="font-sans font-bold uppercase text-black text-xs">Total Value</div>
-                    <div className="text-green-800 text-sm">55</div>
+                    <div className="font-sans font-bold uppercase text-black text-[12px]">Total Value</div>
+                    <div className="text-green-800 text-[10px]">55</div>
                 </div>
                 <div className="w-full items-center p-1">
-                    <div className="font-sans font-bold uppercase text-black text-xs">TOTAL WEIGHT</div>
-                    <div className="text-green-800 text-sm">100 KG</div>
+                    <div className="font-sans font-bold uppercase text-black text-[12px]">TOTAL WEIGHT</div>
+                    <div className="text-green-800 text-[10px]">100 KG</div>
                 </div>
                 <div className="w-full items-center p-1">
-                    <div className="font-sans font-bold uppercase text-black text-sm">TRANSACTION ID</div>
-                    <div className="text-green-800 text-[12px]"><i>XXXX....XXX....XXX...XXX...</i></div>
+                    <div className="font-sans font-bold uppercase text-black text-[12px]">TRANSACTION ID</div>
+                    <div className="text-green-800 text-[10px]"><i>XXXX....XXX....XXX...XXX...</i></div>
                 </div>
                 <div className="w-full items-center p-1 text-right">
-                    <div className="uppercase font-bold text-black p-2 text-xs"><i className="">X</i></div>
+                    <div className="uppercase font-bold text-black p-2 text-[12px]"><i className="">X</i></div>
                     <div className="text-green-800 text-[8px]"><span><em>5th May 2020, 12:23</em></span></div>
                 </div>+__
             </div>
             <div className="bg-[#ffffff] flex rounded-lg m-2 p-2">
                 <div className="w-full items-center p-1">
-                    <div className="font-sans font-bold uppercase text-black text-xs">Total Value</div>
-                    <div className="text-green-800 text-sm">55</div>
+                    <div className="font-sans font-bold uppercase text-black text-[12px]">Total Value</div>
+                    <div className="text-green-800 text-[10px]">55</div>
                 </div>
                 <div className="w-full items-center p-1">
-                    <div className="font-sans font-bold uppercase text-black text-xs">TOTAL WEIGHT</div>
-                    <div className="text-green-800 text-sm">100 KG</div>
+                    <div className="font-sans font-bold uppercase text-black text-[12px]">TOTAL WEIGHT</div>
+                    <div className="text-green-800 text-[10px]">100 KG</div>
                 </div>
                 <div className="w-full items-center p-1">
-                    <div className="font-sans font-bold uppercase text-black text-sm">TRANSACTION ID</div>
-                    <div className="text-green-800 text-[12px]"><i>XXXX....XXX....XXX...XXX...</i></div>
+                    <div className="font-sans font-bold uppercase text-black text-[12px]">TRANSACTION ID</div>
+                    <div className="text-green-800 text-[10px]"><i>XXXX....XXX....XXX...XXX...</i></div>
                 </div>
                 <div className="w-full items-center p-1 text-right">
-                    <div className="uppercase font-bold text-black p-2 text-xs"><i className="">X</i></div>
+                    <div className="uppercase font-bold text-black p-2 text-[12px]"><i className="">X</i></div>
                     <div className="text-green-800 text-[8px]"><span><em>5th May 2020, 12:23</em></span></div>
                 </div>+__
             </div>
             <div className="bg-[#ffffff] flex rounded-lg m-2 p-2">
                 <div className="w-full items-center p-1">
-                    <div className="font-sans font-bold uppercase text-black text-xs">Total Value</div>
-                    <div className="text-green-800 text-sm">55</div>
+                    <div className="font-sans font-bold uppercase text-black text-[12px]">Total Value</div>
+                    <div className="text-green-800 text-[10px]">55</div>
                 </div>
                 <div className="w-full items-center p-1">
-                    <div className="font-sans font-bold uppercase text-black text-xs">TOTAL WEIGHT</div>
-                    <div className="text-green-800 text-sm">100 KG</div>
+                    <div className="font-sans font-bold uppercase text-black text-[12px]">TOTAL WEIGHT</div>
+                    <div className="text-green-800 text-[10px]">100 KG</div>
                 </div>
                 <div className="w-full items-center p-1">
-                    <div className="font-sans font-bold uppercase text-black text-sm">TRANSACTION ID</div>
-                    <div className="text-green-800 text-[12px]"><i>XXXX....XXX....XXX...XXX...</i></div>
+                    <div className="font-sans font-bold uppercase text-black text-[12px]">TRANSACTION ID</div>
+                    <div className="text-green-800 text-[10px]"><i>XXXX....XXX....XXX...XXX...</i></div>
                 </div>
                 <div className="w-full items-center p-1 text-right">
-                    <div className="uppercase font-bold text-black p-2 text-xs"><i className="">X</i></div>
+                    <div className="uppercase font-bold text-black p-2 text-[12px]"><i className="">X</i></div>
                     <div className="text-green-800 text-[8px]"><span><em>5th May 2020, 12:23</em></span></div>
                 </div>+__
             </div>
             <div className="bg-[#ffffff] flex rounded-lg m-2 p-2">
                 <div className="w-full items-center p-1">
-                    <div className="font-sans font-bold uppercase text-black text-xs">Total Value</div>
-                    <div className="text-green-800 text-sm">55</div>
+                    <div className="font-sans font-bold uppercase text-black text-[12px]">Total Value</div>
+                    <div className="text-green-800 text-[10px]">55</div>
                 </div>
                 <div className="w-full items-center p-1">
-                    <div className="font-sans font-bold uppercase text-black text-xs">TOTAL WEIGHT</div>
-                    <div className="text-green-800 text-sm">100 KG</div>
+                    <div className="font-sans font-bold uppercase text-black text-[12px]">TOTAL WEIGHT</div>
+                    <div className="text-green-800 text-[10px]">100 KG</div>
                 </div>
                 <div className="w-full items-center p-1">
-                    <div className="font-sans font-bold uppercase text-black text-sm">TRANSACTION ID</div>
-                    <div className="text-green-800 text-[12px]"><i>XXXX....XXX....XXX...XXX...</i></div>
+                    <div className="font-sans font-bold uppercase text-black text-[12px]">TRANSACTION ID</div>
+                    <div className="text-green-800 text-[10px]"><i>XXXX....XXX....XXX...XXX...</i></div>
                 </div>
                 <div className="w-full items-center p-1 text-right">
-                    <div className="uppercase font-bold text-black p-2 text-xs"><i className="">X</i></div>
+                    <div className="uppercase font-bold text-black p-2 text-[12px]"><i className="">X</i></div>
                     <div className="text-green-800 text-[8px]"><span><em>5th May 2020, 12:23</em></span></div>
                 </div>+__
             </div>
