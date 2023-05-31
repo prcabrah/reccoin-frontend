@@ -1,6 +1,7 @@
-import React from "react";
+// import React from "react";
 import arrowDownIcon from '../assets/arrowDown.svg'
-import dotIcon from '../assets/dot.svg'
+// import dotIcon from '../assets/dot.svg'
+import { GoPrimitiveDot } from "react-icons/go";
 
 let companies = [
   "AMX Global Enterprise",

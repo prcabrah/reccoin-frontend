@@ -1,6 +1,6 @@
 import settingsWhiteIcon from '../assets/settingsWhite.svg'
 import settingsGreenIcon from '../assets/settingsGreen.svg'
-import depositIcon from '../assets/deposit-ic.svg'
+// import depositIcon from '../assets/deposit-ic.svg'
 import companyIcon from '../assets/company-ic.svg'
 import chatWhiteIcon from '../assets/chatWhite.svg'
 import chatGreenIcon from '../assets/chatGreen.svg'
