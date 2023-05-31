@@ -1,7 +1,7 @@
 import profileIcon from '../assets/profile.svg'
 import notificationIcon from '../assets/notification.svg'
-import supportIcon from '../assets/support.svg'
-import newsIcon from '../assets/news.svg'
+// import supportIcon from '../assets/support.svg'
+// import newsIcon from '../assets/news.svg'
 
 export const DepositTransaction =  [
     {
