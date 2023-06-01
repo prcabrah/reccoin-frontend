@@ -10,13 +10,14 @@ import notificationWhiteIcon from "../assets/notificationWhite.svg";
 import notificationGreenIcon from "../assets/notificationGreen.svg";
 import historyWhiteIcon from '../assets/historyWhite.svg'
 import historyGreenIcon from '../assets/historyGreen.svg'
-import dashboardIcon from '../assets/dashboard.svg'
+import dashboardWhiteIcon from '../assets/dashboardWhite.svg'
+import dashboardGreenIcon from '../assets/dashboardGreen.svg'
 
 export const UserDashboardNavData = [
     {
         'title': "Dashboard",
-        'white_icon': dashboardIcon,
-        'green_icon': dashboardIcon,
+        'white_icon': dashboardWhiteIcon,
+        'green_icon': dashboardGreenIcon,
         'id': "dashboard-deposit",
         'link': '/user-dashboard'
 
@@ -33,8 +34,7 @@ export const UserDashboardNavData = [
         'green_icon': notificationGreenIcon,
         'title': "Notifications",
         'id': 'dashboard-notifications',
-        'link': ''
-        
+        'link': ''   
     },
     {
         'white_icon': settingsWhiteIcon,
@@ -65,17 +65,15 @@ export const UserDashboardNavData = [
         'id': 'dashboard-chat',
         'link': '',
     }
-
 ]
 
 export const CompanyDashboardNavData = [
     {
         'title': "Dashboard",
-        'white_icon': dashboardIcon,
-        'green_icon': dashboardIcon,
+        'white_icon': dashboardWhiteIcon,
+        'green_icon': dashboardGreenIcon,
         'id': "dashboard-deposit",
         'link': '/company-dashboard'
-
     },
     {
         'icon': companyIcon,

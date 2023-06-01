@@ -13,7 +13,7 @@ const Notifications = () => {
     setOpen(!open);
   };
   return (
-    <UserDashboardLayout active_link={'/user-dashboaed-notifications'} dashboard_content={
+    <UserDashboardLayout active_link={'Notifications'} dashboard_content={
       <div className="w-[28rem] md:w-[36rem] lg:w-[47rem] h-[30rem] mx-8 border-4 border-[#F8F9FB]-300">
         <div className="flex flex-col items-start justify-start px-3">
           <div className="flex gap-8 items-center mt-2 justify-between w-full">

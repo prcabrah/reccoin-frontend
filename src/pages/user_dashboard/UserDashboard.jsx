@@ -1,10 +1,9 @@
 import React, {useState} from 'react'
-import UserDashboardLayout from '../components/dashboard_components/UserDashboardLayout'
-import settingsIcon from "../assets/settingsWhite.svg";
-import {DepositTransaction} from "../data/DepositTransactionData";
+import UserDashboardLayout from '../../components/dashboard_components/UserDashboardLayout'
+import {DepositTransaction} from "../../data/DepositTransactionData";
 import {Link} from "react-router-dom";
 
-import closeIcon from "../assets/close.svg";
+import closeIcon from "../../assets/close.svg";
 
 const DepositPlasticTab = ({ toggleClose }) => {
     const [companyName, setCompanyName] = useState('');

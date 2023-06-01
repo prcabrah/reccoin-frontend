@@ -3,9 +3,10 @@ import { Route, Routes } from 'react-router-dom';
 
 import settingsWhiteIcon from '../../assets/settingsWhite.svg'
 import settingsGreenIcon from '../../assets/settingsGreen.svg'
-import companyIcon from '../../assets/company-ic.svg'
+import dashboardWhiteIcon from '../../assets/dashboardWhite.svg'
+import dashboardGreenIcon from '../../assets/dashboardGreen.svg'
 
-import CompanyDashboard from "../../pages/CompanyDashboard.jsx";
+import CompanyDashboard from "../../pages/company_dashboard/CompanyDashboard.jsx";
 import CompanyDashboardSettings from "../../pages/company_dashboard/DashboardCompanySettings.jsx";
 import notificationWhiteIcon from "../../assets/notificationWhite.svg";
 import notificationGreenIcon from "../../assets/notificationGreen.svg";
@@ -15,8 +16,8 @@ const routes = [
     {
         name: 'Dashboard',
         path: '/company-dashboard',
-        white_icon: companyIcon,
-        green_icon: companyIcon,
+        white_icon: dashboardWhiteIcon,
+        green_icon: dashboardGreenIcon,
         id: 'dashboard-companies',
         component: CompanyDashboard
     },
