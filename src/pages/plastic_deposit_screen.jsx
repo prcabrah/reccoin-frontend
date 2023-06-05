@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import { plasticDeposit } from "../data/plastic_deposit_data";
 
 const PlasticDepositScreen = () => {

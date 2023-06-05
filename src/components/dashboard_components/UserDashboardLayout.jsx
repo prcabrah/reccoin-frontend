@@ -6,9 +6,10 @@ import { UserDashboardNavData } from '../../data/DashboardData';
 import { DashboardFooterData } from '../../data/DashboardFooterData';
 import searchIcon from '../../assets/search.svg'
 import Deposit from './Deposit';
+import { routes } from '../../routes/dashboard/user.jsx'
 
 const UserDashboardLayout = ({dashboard_content, active_link}) => {
- 
+
   return (
     <div>
       {/* toggle menu button */}
@@ -23,7 +24,7 @@ const UserDashboardLayout = ({dashboard_content, active_link}) => {
         <img src={menuIcon} alt="" />
       </button>
 
-      {/* left side bar */}
+      {/* left sidebar */}
       <aside
         id='default-sidebar'
         className='fixed left-0 z-40 bg-[#0D4D00] items-center border-2 border-[#0D4D00] w-[20%] h-screen overflow-y-scroll transition-transform -translate-x-full sm:translate-x-0 mb-20'
@@ -51,15 +52,15 @@ const UserDashboardLayout = ({dashboard_content, active_link}) => {
         {/*  menu items*/}
         <div className='h-full  absolute top-40 w-full py-4 dark:bg-gray-800'>
          <ul className='text-white font-medium '>
-         {
-            UserDashboardNavData.map((item, index) =>
-            <Link to={item.link} key={index} 
-              className={`w-full flex flex-row px-4 py-2 justify-left items-center bg-${item.title == active_link ? 'white' : ''} text-${item.title == active_link ? 'primary60' : 'white'}`}>
-                <img src={`${item.title == active_link ? item.green_icon : item.white_icon }`} alt={`${item.title} logo`} className='mr-4' />
-                <h4 className='text-2 font-montserrat'>{item.title}</h4>
-            </Link>
-            )
-        }
+           {
+             routes.map((route, index) =>
+                 <Link to={route.path} key={index}
+                       className={`w-full flex flex-row px-4 py-2 justify-left items-center bg-${route.name === active_link ? 'white' : ''} text-${route.name === active_link ? 'primary60' : 'white'}`}>
+                   <img src={`${route.name === active_link ? route.green_icon : route.white_icon }`} alt={`${route.name} logo`} className='mr-4' />
+                   <h4 className='text-2 font-montserrat'>{route.name}</h4>
+                 </Link>
+             )
+           }
          </ul>
           {/* <ul className='space-y-2 font-medium'>
             <li>
@@ -291,13 +292,13 @@ const UserDashboardLayout = ({dashboard_content, active_link}) => {
         </header>
 
           {/* dashboard content */}
-        <div className=''>
+        <div className='md:container md:mx-auto px-10'>
             {dashboard_content ? dashboard_content : <Deposit/>}
         </div>
 
           {/* dashboard footer */}
         <footer className='w-[100%] px-4 py-2 bg-gray-200 text-black '>
-          
+
           <div className=' flex flex-row item-center italic '>
 
             <div className='flex flex-col'>
@@ -315,14 +316,14 @@ const UserDashboardLayout = ({dashboard_content, active_link}) => {
             {/* other links */}
             <div className='flex flex-row justify-between items-center'>
               {
-                DashboardFooterData.map((footeritem, footerindex) => 
+                DashboardFooterData.map((footeritem, footerindex) =>
                 <Link key={footerindex} className='flex flex-col p-4 mr-4 justify-center items-center'>
                   <img src={footeritem.icon} alt={`${footeritem.title} icon`} className='h-8 w-8' />
                   <h4 className='font-bold text-primary60'>{footeritem.title}</h4>
                 </Link>
                 )
               }
-            
+
             </div>
             {/* <div className='w-[16rem] md:w-[22rem] lg:w-[70rem] h-[4rem] border-black-400 bg-[#0D4D00]'></div> */}
           </div>

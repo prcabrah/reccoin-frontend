@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <div>
       <Header />
-      <div className="max-w-[928px] mx-auto">
+      <div className="">
         <Hero />
         <ReccoinAsaService />
         <EarnReccoinReward />

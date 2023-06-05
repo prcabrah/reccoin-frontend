@@ -1,21 +1,23 @@
 import settingsWhiteIcon from '../assets/settingsWhite.svg'
 import settingsGreenIcon from '../assets/settingsGreen.svg'
-import depositIcon from '../assets/deposit-ic.svg'
+// import depositIcon from '../assets/deposit-ic.svg'
 import companyIcon from '../assets/company-ic.svg'
 import chatWhiteIcon from '../assets/chatWhite.svg'
 import chatGreenIcon from '../assets/chatGreen.svg'
 import offersWhiteIcon from '../assets/offersWhite.svg'
 import offersGreenIcon from '../assets/offersGreen.svg'
-import notificationIcon from '../assets/notification-ic.svg'
+import notificationWhiteIcon from "../assets/notificationWhite.svg";
+import notificationGreenIcon from "../assets/notificationGreen.svg";
 import historyWhiteIcon from '../assets/historyWhite.svg'
 import historyGreenIcon from '../assets/historyGreen.svg'
-import dashboardIcon from '../assets/dashboard.svg'
+import dashboardWhiteIcon from '../assets/dashboardWhite.svg'
+import dashboardGreenIcon from '../assets/dashboardGreen.svg'
 
 export const UserDashboardNavData = [
     {
         'title': "Dashboard",
-        'white_icon': dashboardIcon,
-        'green_icon': dashboardIcon,
+        'white_icon': dashboardWhiteIcon,
+        'green_icon': dashboardGreenIcon,
         'id': "dashboard-deposit",
         'link': '/user-dashboard'
 
@@ -28,12 +30,11 @@ export const UserDashboardNavData = [
         'link': ''
     },
     {
-        'white_icon': notificationIcon,
-        'green_icon': notificationIcon,
+        'white_icon': notificationWhiteIcon,
+        'green_icon': notificationGreenIcon,
         'title': "Notifications",
         'id': 'dashboard-notifications',
-        'link': ''
-        
+        'link': ''   
     },
     {
         'white_icon': settingsWhiteIcon,
@@ -64,17 +65,15 @@ export const UserDashboardNavData = [
         'id': 'dashboard-chat',
         'link': '',
     }
-
 ]
 
 export const CompanyDashboardNavData = [
     {
         'title': "Dashboard",
-        'white_icon': dashboardIcon,
-        'green_icon': dashboardIcon,
+        'white_icon': dashboardWhiteIcon,
+        'green_icon': dashboardGreenIcon,
         'id': "dashboard-deposit",
         'link': '/company-dashboard'
-
     },
     {
         'icon': companyIcon,
@@ -83,8 +82,8 @@ export const CompanyDashboardNavData = [
         'link': ''
     },
     {
-        'white_icon': notificationIcon,
-        'green_icon': notificationIcon,
+        'white_icon': notificationWhiteIcon,
+        'green_icon': notificationGreenIcon,
         'title': "Notifications",
         'id': 'dashboard-notifications',
         'link': ''
@@ -102,8 +101,7 @@ export const CompanyDashboardNavData = [
         'green_icon': historyGreenIcon,
         'title': "Hstory",
         'id': 'dashboard-history',
-        'link': '/company-dashboard/history',
-        
+        'link': '/company-dashboard/history',  
     },
     {
         'white_icon': offersWhiteIcon,
