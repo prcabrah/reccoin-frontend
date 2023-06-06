@@ -19,7 +19,7 @@ const Hero = () => {
                 <a href="#">Learn More</a>
               </button> */}
                {/* learn more button */}
-             <MediumButton text={"Learn more"} linkto={'/about-us'} className=""/>
+             <MediumButton text={"Learn more"} linkto={'/about-us'}/>
             </div>
 
             <div>
