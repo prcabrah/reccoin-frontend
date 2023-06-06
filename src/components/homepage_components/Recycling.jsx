@@ -15,7 +15,7 @@ const Recycling = () => {
       RecyclingData.slice(0,3).map((item, index) => 
         // card component
           <div key={index} 
-            className={` w-60 border flex flex-col justify-center items-center text-center mb-8`}>
+            className={` w-64 h-72 px-4 border flex flex-col justify-center items-center text-center mb-8 shadow-light`}>
             {/* icon */}
             <div className=" w-24 h-24 rounded-[50%] bg-[#F2FAF7] p-8 mb-4">
               <img src={item.icon} alt={`${item.title} icon`} className="h-8 w-8"/>
@@ -29,14 +29,14 @@ const Recycling = () => {
     </div>
 
      {/* card container 2 */}
-     <div className="flex flex-row w-full justify-around flex-wrap mt-8">
+     <div className="flex flex-row w-full justify-around flex-wrap mt-12">
     
     {/* map card */}
     {
       RecyclingData.slice(3,6).map((item, index) => 
         // card component
           <div key={index} 
-            className={`w-60 flex flex-col justify-center items-center text-center mb-8`}>
+            className={`w-64 h-72 px-4 border flex flex-col justify-center items-center text-center mb-8 shadow-light`}>
             {/* icon */}
             <div className="w-24 h-24 rounded-[50%] bg-[#F2FAF7] p-8 mb-4">
               <img src={item.icon} alt={`${item.title} icon`} className="h-8 w-8"/>

@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 import emailIcon from '../../assets/email.svg'
 
 const HomeFooter = () => {
-  return   <div className=" w-full bg-primary40 text-white flex flex-row justify-around px-8 py-16">
+  return   <div className=" w-full bg-primary40 text-white flex flex-col justify-around px-8 py-16 md:flex-row">
     {/* footer logo */}
-    <div className=" w-32 h-32 items-center">
+    <div className=" w-32 h-32 mx-auto items-center md:mx-0">
         <Logo fill="#fff" w="120" h="120" />
     </div>
 
     {/* footer Links */}
-    <div className="flex flex-col">
+    <div className="flex flex-col mx-auto md:mx-0">
         <p className="font-2 font-openSans font-bold mb-4">Links</p>
         <Link className="font-2 font-openSans mb-4 font-extralight">
         Home
@@ -24,7 +24,7 @@ const HomeFooter = () => {
     </div>
 
     {/* resources */}
-    <div className="flex flex-col">
+    <div className="flex flex-col mx-auto md:mx-0">
         <p className="font-2 font-openSans font-bold mb-4">Resources</p>
         <Link className="font-2 font-openSans mb-4 font-extralight">
         Blog
@@ -41,7 +41,7 @@ const HomeFooter = () => {
     </div>
 
     {/* contact us */}
-    <div>
+    <div className="mx-auto md:mx-0 text-center md:text-left">
         <p className="font-2 font-openSans font-bold mb-4">Contact Us</p>
         <p className="font-2 font-openSans mb-2 font-extralight">
         1881 SW 164th Avenue
@@ -55,18 +55,18 @@ const HomeFooter = () => {
     </div>
 
     {/* subscribe */}
-    <div>
+    <div className="mx-auto md:mx-0 text-center mt-8 md:mt-0">
         <p className="font-2 font-openSans font-bold mb-4">Subscribe</p>
         <p className="font-2 font-openSans mb-4 font-extralight">
         Subscribe to our mailing list
         </p>
         {/* subscribe input box */}
-        <div className="flex flex-row">
+        <div className="flex md:flex-row flex-col text-center">
             <div className="flex flex-row border-b border-white">
                 <img src={emailIcon} alt="email-icon" className="mr-2" />
                 <input type="text" placeholder="Enter your email" className="outline-none bg-primary40"/>
             </div>
-            <button className="bg-white p-2 text-red-500">SUBMIT</button>
+            <button className="bg-white p-2 text-primary40">SUBMIT</button>
         </div>
     </div>
     </div>
