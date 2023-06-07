@@ -6,7 +6,6 @@ import recycleSVG from "../../assets/recycleSVG.svg";
 import DollarSVG from "../../assets/DollarSVG.svg";
 import HandSVG from "../../assets/HandSVG.svg";
 import Polygon_about from "../../assets/PolygonSVG.svg";
-import Footer from "../homepage_components/HomeFooter";
 
 const Empowering = () => {
   const data = [
@@ -94,24 +93,6 @@ const Empowering = () => {
             </div>
           </div>
         ))}
-      </div>
-      <div className="mt-8 bg-primary60 flex flex-col items-center justify-center w-full">
-        <div className="p-8 text-white text-center">
-          <h2 className="text-2xl">Join Us in Making a Difference!</h2>
-          <p className="p-3">
-            Together, we can transform the way we think about waste and create a
-            more sustainable future. By participating in our platform, you
-            contribute to the global effort to reduce plastic pollution while
-            also benefiting from the rewards and opportunities offered by
-            blockchain technology.
-          </p>
-          <input
-            className="rounded-lg p-2 m-4"
-            type="text"
-            placeholder="Enter your email"
-          />
-        </div>
-        <Footer />
       </div>
     </div>
   );

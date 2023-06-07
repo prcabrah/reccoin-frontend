@@ -14,7 +14,7 @@ const About = () => {
         <div className='flex justify-around items-center flex-col md:flex-row gap-7 py-4 px-12'>
           <div className='max-w-[640px]'>
           {/* description */}
-            <p className='text-black font-base text-[#005232] text-[1.2rem] font-semibold mb-12'>
+            <p className=' font-base text-[#005232] text-[1.2rem] font-semibold mb-12'>
               Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, 
               sed diam nonummy nibh euismod tincidunt ut laoreet dolore 
               magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
