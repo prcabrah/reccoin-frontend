@@ -4,12 +4,14 @@ import { MainRoutes } from './routes/index';
 import { UserDashboardRoutes } from './routes/dashboard/user.jsx';
 import { CompanyDashboardRoutes } from './routes/dashboard/company.jsx';
 
+
 function App() {
   return (
     <>
         <MainRoutes />
         <UserDashboardRoutes />
         <CompanyDashboardRoutes />
+        
     </>
   );
 }
