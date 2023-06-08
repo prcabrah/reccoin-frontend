@@ -3,10 +3,14 @@ import React from 'react';
 const PrivacyPolicy = () => {
   return (
     <div className="flex  justify-center mb-[200px] mt-28">
-      <div className="rounded px-9 py-4 border border-[#006D44] w-[913px] shadow-lg shadow-black/25 ">
-        <h2 className="text-[#006D44] uppercase text-center font-[700] text-[25px] font-roboto py-3 leading-7">
+      <div className='w-full bg-primary40 py-20'>
+        <h2 className="text-[#006D44] uppercase text-center font-[700] text-[25px] font-montserrat py-3 leading-7">
           Privacy policy
         </h2>
+        <h3 className='text-[1rem] font-openSans text-center'>Last Updated: June, 2023</h3>
+      </div>
+      <div className="rounded px-9 py-4 border border-[#006D44] w-[913px] shadow-lg shadow-black/25 ">
+        
         <div className="space-y-4">
           <div>
             <p className="font-openSans">

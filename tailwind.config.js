@@ -23,7 +23,9 @@ export default {
       },
       backgroundImage: {
         'herobg': "url('/src/assets/ellipse-bg.svg')",
-        'faqbg': "url('/src/assets/faq.svg')"
+        'faqbg': "url('/src/assets/faq.svg')",
+        'aboutbg': "url('/src/assets/aboutUsBg.png')",
+        'subscribeBg': "url('/src/assets/subscribeBg.png')"
       },
       screens: {
       }

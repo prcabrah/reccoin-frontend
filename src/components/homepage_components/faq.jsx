@@ -23,7 +23,7 @@ const Faq = () => {
     <h3 className='text-center pt-2 pb-4 font-bold'>We’ve Got Answers</h3>
 
     {/* buttons and image */}
-    <div className='flex flex-col md:flex-row justify-around mb-0 px-10'>
+    <div className='flex flex-col justify-around mb-0 px-10 md:flex-row'>
         <div>
             {
                 faqData.map((item, index) => 
@@ -33,14 +33,14 @@ const Faq = () => {
                 </Link>
                 )
             }
-            <p className='p-4 mb-4'>
+            <p className='md:p-4 md:mb-4'>
                 Can't find your answers? 
                 <Link to={'/contact-us'} className='text-[#005232] ml-2 hover:cursor-pointer'>Contact Us</Link>
             </p> 
         </div>
 
         {/* image */}
-        <img src={faqImage} alt="faq image" className='h-[500px] w-[500px] object-contain -mt-16'/>
+        <img src={faqImage} alt="faq image" className='h-[500px] w-[500px] object-contain md:-mt-16'/>
     </div>
   </div>
   

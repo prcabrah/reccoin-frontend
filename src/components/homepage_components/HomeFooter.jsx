@@ -9,7 +9,7 @@ const HomeFooter = () => {
         <Logo fill="#fff" w="120" h="120" />
     </div>
 
-    <div className="flex flex-row items-center justify-center">
+    <div className="flex flex-row items-center justify-center mt-8 md:mt-0">
          {/* footer Links */}
         <div className="flex flex-col mr-[1.5rem]">
             <p className="font-2 font-openSans font-bold mb-4">Links</p>
@@ -43,7 +43,7 @@ const HomeFooter = () => {
     </div>
    
     {/* contact us */}
-    <div className="flex flex-col justify-center items-center md:items-start md:justify-start">
+    <div className="flex flex-col justify-center items-center mt-8 md:mt-0 md:items-start md:justify-start">
         <p className="font-2 font-openSans font-bold mb-4 w-full text-center md:text-left">Contact Us</p>
         <p className="font-2 font-openSans mb-2 font-extralight">
         1881 SW 164th Avenue
@@ -57,7 +57,7 @@ const HomeFooter = () => {
     </div>
 
     {/* subscribe */}
-    <div className="flex flex-col justify-center items-center md:justify-start md:items-start">
+    <div className="flex flex-col justify-center items-center mt-8 md:mt-0 md:justify-start  md:items-start">
         <p className="font-2 font-openSans font-bold mb-4 w-full text-center md:text-left">Subscribe</p>
         <p className="font-2 font-openSans mb-4 font-extralight">Subscribe to our mailing list</p>
         {/* subscribe input box */}

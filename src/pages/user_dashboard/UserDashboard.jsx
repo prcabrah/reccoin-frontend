@@ -32,7 +32,7 @@ const DepositPlasticTab = ({ toggleClose }) => {
                 <input type="checkbox" name="depositPlastic" id="depositPlastic"
                        className="h-6 w-6 mr-1"
                 />
-                <span className="mr-1">I am sure the details I provided is correct</span>
+                <span className="mr-1">I am sure the details I provided are correct</span>
             </div>
             {/* submit button */}
             <button className="w-[60%] border-2 border-white rounded-lg p-2 bg-[#006D44] my-6">

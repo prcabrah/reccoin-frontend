@@ -94,7 +94,8 @@ export const TokenProvider = ({ children }) => {
         setLoading(false);
       } else {
         setLoading(false)
-        throw new Error('Please install MetaMask or any other Ethereum wallet extension.');
+        // throw new Error('Please install MetaMask or any other Ethereum wallet extension.');
+        alert('Please install MetaMask or any other Ethereum wallet extension.')
       }
     } catch (error) {
       setLoading(false)

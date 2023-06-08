@@ -9,6 +9,8 @@ import ReccoinAsaService from '../components/homepage_components/ReccoinAsaServi
 import HomeFooter from '../components/homepage_components/HomeFooter';
 import Header from '../components/navigation/Header';
 import Footer from '../components/footer';
+import AboutUsAndEarnRecoin from './AboutUsAndEarnRecoin';
+import Subscribe from '../components/homepage_components/Subcribe';
 
 const Home = () => {
   return (
@@ -16,11 +18,11 @@ const Home = () => {
       <Header />
         <Hero />
         <ReccoinAsaService />
-        <EarnReccoinReward />
-        <About />
+        <AboutUsAndEarnRecoin/>
         <Recycling />
         <HowItWorks />
         <LatestNews />
+        <Subscribe/>
         <Faq />
         <HomeFooter />
       <Footer />
