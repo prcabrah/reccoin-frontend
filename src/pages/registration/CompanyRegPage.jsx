@@ -78,7 +78,7 @@ const CompanyRegPage = () => {
               </button>
             </div>
           </div>
-          <div className='w-[10rem] md:w-[16rem] lg:w-[21rem] min-h-[34rem] bg-[url(src/assets/company-bg.svg)]  bg-contain md:bg-cover bg-right bg-no-repeat'></div>
+          <div className='w-[10rem] md:w-[16rem] lg:w-[21rem] min-h-[34rem] bg-[url(/src/assets/company-bg.svg)]  bg-contain md:bg-cover bg-right bg-no-repeat'></div>
         </div>
       </div>
     </div>

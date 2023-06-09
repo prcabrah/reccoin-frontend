@@ -1,9 +1,5 @@
 export const HeaderData = [
     {
-        title:"PRC",
-        link: "/prc"
-    },
-    {
         title:"WHITE PAPER",
         link: "/white-paper"
     },

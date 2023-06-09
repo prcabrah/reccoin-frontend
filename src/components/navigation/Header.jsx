@@ -13,14 +13,6 @@ const Header = () => {
     const [selectedOption, setSelectedOption] = useState('');
     const [toggle_menu, setToggleMenu] = useState(false);
 
-    const handleOptionChange = (e) => {
-        const linkValue = e.target.value
-        setSelectedOption(linkValue);
-    };
-
-    const connectWallet = () => {
-        initializeContract()
-    }
 
     // toggle menu
     const toggleMenu =() => {

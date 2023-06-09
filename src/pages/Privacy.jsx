@@ -7,9 +7,8 @@ const PrivacyPolicy = () => {
   return (
     <>
      <Header/>
-    <div className="">
       {/* header */}
-      <div className='w-full bg-primary40'>
+      <div className='w-full bg-primary40 mt-20'>
         <h2 className="text-white uppercase text-center font-[800] text-[25px] font-montserrat pt-16 pb-8 leading-7">
           Privacy policy
         </h2>
@@ -149,7 +148,6 @@ const PrivacyPolicy = () => {
           </div>
         </div>
       </div>
-    </div>
     <HomeFooter/>
     <Footer/>
     </>
