@@ -1,5 +1,5 @@
 // import React from "react";
-import arrowDownIcon from '../assets/arrowDown.svg'
+import arrowDownIcon from '../../assets/arrowDown.svg'
 // import dotIcon from '../assets/dot.svg'
 import { GoPrimitiveDot } from "react-icons/go";
 

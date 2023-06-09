@@ -3,7 +3,7 @@ import handInAboutPage from './../../assets/handInAboutPage.png';
 
 const Purpose = () => {
   return (
-    <div className="m-[auto] w-[900px]">
+    <div className="m-[auto] w-[900px] py-16">
       <p className="font-sans w-[1000px]  ">
         At Reccoin, we are revolutionizing the way we address the global plastic
         incentivizes individuals to take action by collecting waste plastics and

@@ -9,8 +9,8 @@ import ReccoinAsaService from '../components/homepage_components/ReccoinAsaServi
 import HomeFooter from '../components/homepage_components/HomeFooter';
 import Header from '../components/navigation/Header';
 import Footer from '../components/footer';
-import AboutUsAndEarnRecoin from './AboutUsAndEarnRecoin';
 import Subscribe from '../components/homepage_components/Subcribe';
+import AboutUsAndEarnRecoin from '../components/about_us_components/AboutUsAndEarnRecoin';
 
 const Home = () => {
   return (

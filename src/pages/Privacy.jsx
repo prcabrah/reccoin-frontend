@@ -1,16 +1,22 @@
 import React from 'react';
+import Header from '../components/navigation/Header';
+import HomeFooter from '../components/homepage_components/HomeFooter';
+import Footer from '../components/footer';
 
 const PrivacyPolicy = () => {
   return (
-    <div className="flex  justify-center mb-[200px] mt-28">
-      <div className='w-full bg-primary40 py-20'>
-        <h2 className="text-[#006D44] uppercase text-center font-[700] text-[25px] font-montserrat py-3 leading-7">
+    <>
+     <Header/>
+    <div className="">
+      {/* header */}
+      <div className='w-full bg-primary40'>
+        <h2 className="text-white uppercase text-center font-[800] text-[25px] font-montserrat pt-16 pb-8 leading-7">
           Privacy policy
         </h2>
-        <h3 className='text-[1rem] font-openSans text-center'>Last Updated: June, 2023</h3>
+        <h3 className='text-[1.2rem] text-white font-[700] font-openSans text-center pb-8'>Last Updated: <span className='font-[200]'>June, 2023</span> </h3>
       </div>
-      <div className="rounded px-9 py-4 border border-[#006D44] w-[913px] shadow-lg shadow-black/25 ">
-        
+      {/* content */}
+      <div className="rounded my-16 justify-center w-[80vw] mx-auto px-9 py-4 border border-[#006D44] shadow-lg shadow-black/25 ">
         <div className="space-y-4">
           <div>
             <p className="font-openSans">
@@ -144,6 +150,9 @@ const PrivacyPolicy = () => {
         </div>
       </div>
     </div>
+    <HomeFooter/>
+    <Footer/>
+    </>
   );
 };
 

@@ -1,10 +1,10 @@
 import { useState } from "react"
-import About from "../components/homepage_components/about";
-import { EarnReccoinReward } from "../components/homepage_components/earnReccoin";
-import aboutUsWhiteIcon from '../assets/aboutUsWhiteIcon.svg'
-import aboutUsBlackIcon from '../assets/aboutUsBlackIcon.svg'
-import earnReccoinWhiteIcon from '../assets/earnReccoinWhiteIcon.svg'
-import earnReccoinBlackIcon from '../assets/earnReccoinBlackIcon.svg'
+import About from "../homepage_components/about";
+import { EarnReccoinReward } from "../homepage_components/earnReccoin";
+import aboutUsWhiteIcon from '../../assets/aboutUsWhiteIcon.svg'
+import aboutUsBlackIcon from '../../assets/aboutUsBlackIcon.svg'
+import earnReccoinWhiteIcon from '../../assets/earnReccoinWhiteIcon.svg'
+import earnReccoinBlackIcon from '../../assets/earnReccoinBlackIcon.svg'
 
 const AboutUsAndEarnRecoin = () => {
 

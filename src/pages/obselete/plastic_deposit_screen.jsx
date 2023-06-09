@@ -1,5 +1,5 @@
 // import React from "react";
-import { plasticDeposit } from "../data/plastic_deposit_data";
+import { plasticDeposit } from "../../data/plastic_deposit_data";
 
 const PlasticDepositScreen = () => {
   return (

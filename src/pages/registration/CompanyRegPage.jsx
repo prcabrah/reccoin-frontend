@@ -1,4 +1,4 @@
-import Logo from './../components/logo';
+import Logo from '../../components/logo';
 
 const CompanyRegPage = () => {
   return (
@@ -73,12 +73,12 @@ const CompanyRegPage = () => {
                   the Privacy Policy
                 </p>
               </div>
-              <button className='rounded-full rounded-[6px] absolute bottom-6 left-36 py-1 px-6 text-[0.6rem] md:text-[0.8rem] lg:text-[1rem] font-medium text-[#fff] bg-[#0D4D00]'>
+              <button className='rounded-[6px] absolute bottom-6 left-36 py-1 px-6 text-[0.6rem] md:text-[0.8rem] lg:text-[1rem] font-medium text-[#fff] bg-[#0D4D00]'>
                 Register
               </button>
             </div>
           </div>
-          <div className='w-[10rem] md:w-[16rem] lg:w-[21rem] min-h-[34rem] bg-[url(./assets/company-bg.svg)]  bg-contain md:bg-cover bg-right bg-no-repeat'></div>
+          <div className='w-[10rem] md:w-[16rem] lg:w-[21rem] min-h-[34rem] bg-[url(src/assets/company-bg.svg)]  bg-contain md:bg-cover bg-right bg-no-repeat'></div>
         </div>
       </div>
     </div>

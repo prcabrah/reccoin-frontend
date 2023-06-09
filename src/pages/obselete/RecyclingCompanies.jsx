@@ -1,5 +1,5 @@
 // import React from 'react'
-import { PRCData } from '../data/PRCdata'
+import { PRCData } from '../../data/PRCdata'
 import { Link } from 'react-router-dom'
 
 

@@ -3,6 +3,7 @@
 import AboutUsHero from "../components/about_us_components/AboutUsHero";
 import Empowering from "../components/about_us_components/Empowering";
 import JoinUs from "../components/about_us_components/JoinUs";
+import Purpose from "../components/about_us_components/Purpose";
 import Values from "../components/about_us_components/Values";
 import Vision from "../components/about_us_components/Vision";
 import Footer from "../components/footer";
@@ -14,7 +15,8 @@ const AboutUs = () => {
     <>
       <Header/>
       <AboutUsHero/>
-      <Values/>
+      {/* <Values/> */}
+      <Purpose/>
       <Vision/>
       <Empowering/>
       <JoinUs/>
